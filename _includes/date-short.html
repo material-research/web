@@ -1,0 +1,1 @@
+{%- assign dm = include.d | date: "%-m" | minus: 1 -%}{%- assign dmn = "Jan,Feb,Mar,Apr,Mei,Jun,Jul,Agu,Sep,Okt,Nov,Des" | split: "," -%}<span data-lang="en">{{ include.d | date: "%b %-d" }}</span><span data-lang="id">{{ include.d | date: "%-d" }} {{ dmn[dm] }}</span>

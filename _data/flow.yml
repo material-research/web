@@ -1,0 +1,52 @@
+# "From plant to product" map on the Home page. One entry per step, in order.
+# Fields ending in _id are the Indonesian text. Keep short; chips are materials, methods, or outputs.
+- id: plant
+  icon: seedling
+  short: Plant
+  short_id: Tanaman
+  title: Plants and agro-residue
+  title_id: Tanaman dan residu pertanian
+  text: Everything starts with renewable biomass, such as bamboo, ramie, and rice husk, instead of imported synthetic fibers.
+  text_id: Semuanya berawal dari biomassa terbarukan, seperti bambu, rami, dan sekam padi, bukan serat sintetis impor.
+  chips: ["Bamboo", "Ramie", "Rice husk"]
+  chips_id: ["Bambu", "Rami", "Sekam padi"]
+- id: fiber
+  icon: scissors
+  short: Fiber
+  short_id: Serat
+  title: Fiber preparation
+  title_id: Penyiapan serat
+  text: Fibers are extracted, cleaned, dried, and cut to the size needed, so that every batch behaves the same way.
+  text_id: Serat diekstraksi, dibersihkan, dikeringkan, dan dipotong sesuai ukuran, agar setiap batch berperilaku sama.
+  chips: ["Extraction", "Cleaning", "Drying"]
+  chips_id: ["Ekstraksi", "Pembersihan", "Pengeringan"]
+- id: treat
+  icon: flask
+  short: Treat
+  short_id: Perlakuan
+  title: Surface treatment
+  title_id: Perlakuan permukaan
+  text: Alkaline treatment cleans the fiber surface so that the resin wets it better and sticks stronger.
+  text_id: Perlakuan alkali membersihkan permukaan serat sehingga resin membasahi dan melekat lebih kuat.
+  chips: ["Alkaline treatment", "Wettability", "Adhesion"]
+  chips_id: ["Perlakuan alkali", "Keterbasahan", "Adhesi"]
+- id: make
+  icon: layer-group
+  short: Composite
+  short_id: Komposit
+  title: Composite fabrication
+  title_id: Pembuatan komposit
+  text: Treated fibers are combined with a resin matrix such as epoxy and formed into panels and test specimens.
+  text_id: Serat yang sudah diberi perlakuan digabung dengan matriks resin seperti epoksi dan dibentuk menjadi panel dan spesimen uji.
+  chips: ["Epoxy matrix", "Panels", "Specimens"]
+  chips_id: ["Matriks epoksi", "Panel", "Spesimen"]
+- id: test
+  icon: microscope
+  short: Product
+  short_id: Produk
+  title: Testing and products
+  title_id: Pengujian dan produk
+  text: Mechanical, thermal, and morphological tests show how the material performs. The best results become products such as smart composite panels from rice husk.
+  text_id: Uji mekanik, termal, dan morfologi menunjukkan kinerja material. Hasil terbaik menjadi produk seperti panel komposit pintar dari sekam padi.
+  chips: ["Mechanical", "Thermal", "Morphology", "Flame retardancy"]
+  chips_id: ["Mekanik", "Termal", "Morfologi", "Ketahanan api"]

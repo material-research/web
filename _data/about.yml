@@ -1,0 +1,23 @@
+# About page data. Fields ending in _id are the Indonesian text.
+# vision / mission: leave empty ("") until the owner provides them; the sections are hidden while empty.
+# To fill: vision: "text", and mission as a list of short sentences (see example in git history of this file).
+
+vision: ""
+vision_id: ""
+mission: []
+mission_id: []
+
+# Institutions of co-authors on the group's publications (from the owner's Google Scholar profile).
+collaborators:
+  - name: "Hasanuddin University"
+    name_id: "Universitas Hasanuddin"
+    place: "Makassar, Indonesia"
+    place_id: "Makassar, Indonesia"
+  - name: "Universiti Kebangsaan Malaysia"
+    name_id: "Universiti Kebangsaan Malaysia"
+    place: "Malaysia"
+    place_id: "Malaysia"
+  - name: "Politeknik Negeri Ujung Pandang"
+    name_id: "Politeknik Negeri Ujung Pandang"
+    place: "Makassar, Indonesia"
+    place_id: "Makassar, Indonesia"

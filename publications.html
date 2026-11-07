@@ -1,0 +1,96 @@
+---
+layout: page
+title: Publications
+title_id: Publikasi
+subtitle: Research output from the group and collaborators
+subtitle_id: Hasil riset dari kelompok dan kolaborator
+lede: Journal articles, proceedings, and book chapters on composite materials, agro-processing machinery, manufacturing, and energy systems.
+lede_id: Artikel jurnal, prosiding, dan bab buku tentang komposit, mesin pengolahan agro, manufaktur, dan sistem energi.
+description: Publications of the Agromaterials Research Group, Politeknik ATI Makassar, on composite materials, agro-processing machinery, manufacturing, and energy systems.
+permalink: /publications/
+---
+{% assign pubs = site.data.publications | sort: "year" | reverse %}
+{% assign years = site.data.publications | map: "year" | uniq | sort | reverse %}
+
+{% assign years_asc = years | reverse %}
+{%- assign ymax = 1 -%}
+{%- for y in years_asc -%}{%- assign yc = site.data.publications | where_exp: "x", "x.year == y" | size -%}{%- if yc > ymax -%}{%- assign ymax = yc -%}{%- endif -%}{%- endfor -%}
+{%- assign tmax = 1 -%}
+{%- for th in site.data.pub_themes -%}{%- assign tc = site.data.publications | where_exp: "x", "x.theme == th.id" | size -%}{%- if tc > tmax -%}{%- assign tmax = tc -%}{%- endif -%}{%- endfor -%}
+<section class="pub-charts fade-in" aria-label="{{ site.data.i18n.pub_chart_year.en }}">
+  <div class="pub-chart">
+    <h2 class="pub-chart-title">{% include t.html key="pub_chart_year" %}</h2>
+    <div class="bars-v">
+      {% for y in years_asc %}{% assign yc = site.data.publications | where_exp: "x", "x.year == y" | size %}
+      <button type="button" class="bar-v" data-year="{{ y }}" style="--h: {{ yc | times: 100.0 | divided_by: ymax }}%; --i: {{ forloop.index0 }}" aria-label="{{ y }}: {{ yc }}">
+        <span class="bar-col"><span class="bar-num">{{ yc }}</span><span class="bar-fill"></span></span><span class="bar-label">{{ y }}</span>
+      </button>
+      {% endfor %}
+    </div>
+  </div>
+  <div class="pub-chart">
+    <h2 class="pub-chart-title">{% include t.html key="pub_chart_theme" %}</h2>
+    <div class="bars-h">
+      {% for th in site.data.pub_themes %}{% assign tc = site.data.publications | where_exp: "x", "x.theme == th.id" | size %}
+      <button type="button" class="bar-h" data-theme="{{ th.id }}" style="--w: {{ tc | times: 100.0 | divided_by: tmax }}%; --i: {{ forloop.index0 }}">
+        <span class="bar-h-label">{% include tt.html en=th.short id=th.short_id %}</span>
+        <span class="bar-h-track"><span class="bar-fill"><span class="pub-dot" data-theme="{{ th.id }}"></span></span></span>
+        <span class="bar-num">{{ tc }}</span>
+      </button>
+      {% endfor %}
+    </div>
+  </div>
+  <p class="pub-chart-hint">{% include t.html key="pub_chart_hint" %}</p>
+</section>
+
+<div class="pub-filters" id="pubFilters">
+  <div class="pub-filter-row pub-filter-themes">
+    {% for th in site.data.pub_themes %}
+    <button class="pub-filter-btn pub-filter-theme" data-theme="{{ th.id }}">
+      <span class="pub-dot" data-theme="{{ th.id }}"></span>{% include tt.html en=th.name id=th.name_id %}
+    </button>
+    {% endfor %}
+  </div>
+  <div class="pub-filter-row">
+    <label class="pub-search" for="pubSearch">
+      <i class="fas fa-search" aria-hidden="true"></i>
+      <input type="search" id="pubSearch" placeholder="{{ site.data.i18n.search_placeholder.en }}" autocomplete="off" aria-label="Search publications">
+    </label>
+    <select id="pubYear" class="pub-year-select" aria-label="{{ site.data.i18n.year_filter.en }}">
+      <option value="">{{ site.data.i18n.year_all.en }}</option>
+      {% for y in years %}<option value="{{ y }}">{{ y }}</option>{% endfor %}
+    </select>
+    <button class="pub-filter-btn pub-filter-clear" id="pubClear" hidden>{% include t.html key="clear" %}</button>
+  </div>
+</div>
+<p class="pub-count" id="pubCount" aria-live="polite">{{ pubs.size }} publications</p>
+
+<ul class="pub-list">
+  {% for p in pubs %}
+  {% assign th = site.data.pub_themes | where: "id", p.theme | first %}
+  <li class="pub-item" data-year="{{ p.year }}" data-theme="{{ p.theme }}">
+    <div class="pub-gutter"><span class="pub-year">{{ p.year }}</span></div>
+    <div class="pub-body">
+      <p class="pub-title">{% if p.url != "" %}<a href="{{ p.url }}" target="_blank" rel="noopener">{{ p.title }}</a>{% else %}{{ p.title }}{% endif %}</p>
+      <p class="pub-authors">{{ p.authors }}</p>
+      <p class="pub-meta">
+        <span class="pub-venue">{{ p.venue }}</span>
+        {% if p.detail %}<span class="pub-meta-detail">{{ p.detail }}</span>{% endif %}
+        {% if p.status %}<span class="pub-status">{{ p.status }}</span>{% endif %}
+        <button class="pub-theme" data-theme="{{ p.theme }}"><span class="pub-dot" data-theme="{{ p.theme }}"></span>{% include tt.html en=th.short id=th.short_id %}</button>
+        {% if p.url == "" or p.url == nil %}<a href="https://scholar.google.com/scholar?q={{ p.title | uri_escape }}" class="pub-scholar" target="_blank" rel="noopener"><i class="fas fa-magnifying-glass" aria-hidden="true"></i> {% include t.html key="pub_find" %}</a>{% endif %}
+        {% if p.pdf != "" %}<a href="{{ p.pdf }}" class="pub-icon" target="_blank" rel="noopener" title="PDF" aria-label="PDF"><i class="fas fa-file-pdf"></i></a>{% endif %}
+        {% if p.code != "" %}<a href="{{ p.code }}" class="pub-icon" target="_blank" rel="noopener" title="Code or data" aria-label="Code or data"><i class="fab fa-github"></i></a>{% endif %}
+      </p>
+    </div>
+  </li>
+  {% endfor %}
+</ul>
+<p class="pub-empty" id="pubEmpty" hidden>{% include t.html key="pub_empty" %}</p>
+<div class="pub-more-wrap"><button type="button" class="pub-filter-btn pub-more" id="pubMore" hidden></button></div>
+
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"ItemList","name":{{ site.title | jsonify }},"itemListElement":[
+{% for p in pubs %}{"@type":"ListItem","position":{{ forloop.index }},"item":{"@type":"ScholarlyArticle","name":{{ p.title | jsonify }},"datePublished":"{{ p.year }}","author":[{% assign au = p.authors | split: ", " %}{% for a in au %}{"@type":"Person","name":{{ a | jsonify }}}{% unless forloop.last %},{% endunless %}{% endfor %}],"isPartOf":{"@type":"Periodical","name":{{ p.venue | jsonify }}}{% if p.url and p.url != "" %},"url":{{ p.url | jsonify }}{% endif %}}}{% unless forloop.last %},{% endunless %}{% endfor %}
+]}
+</script>

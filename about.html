@@ -1,0 +1,86 @@
+---
+layout: page
+title: About Us
+title_id: Tentang Kami
+subtitle: Who we are and what we do
+subtitle_id: Siapa kami dan apa yang kami kerjakan
+description: About the Agromaterials Research Group at Politeknik ATI Makassar, working on composite materials from plant-based resources, agro-processing machinery, and sustainable manufacturing.
+permalink: /about/
+---
+{% assign n_pubs = site.data.publications | size %}
+{% assign n_areas = site.data.research | size %}
+{% assign n_grants = site.data.grants | size %}
+
+<section class="about-intro fade-in">
+  <div class="about-intro-logo"><img src="{{ '/assets/img/logo-360.webp' | relative_url }}" alt="{{ site.title }}" width="180" height="180"></div>
+  <div class="about-intro-text">
+    <h2 class="editorial-heading">{% include t.html key="about_who_title" %}</h2>
+    <p>{% include t.html key="about_who_p1" %}</p>
+    <p>{% include t.html key="about_who_p2" %}</p>
+    <p class="about-affil"><i class="fas fa-location-dot" aria-hidden="true"></i> {{ site.lab.institution }}, {% include tt.html en=site.lab.department id=site.lab.department_id %}, {{ site.lab.address_line2 }}</p>
+  </div>
+</section>
+
+<div class="grant-stats fade-in">
+  <div class="grant-stat"><span class="grant-stat-num">{{ n_areas }}</span><span class="grant-stat-label">{% include t.html key="about_stat_areas" %}</span></div>
+  <div class="grant-stat"><span class="grant-stat-num">{{ n_pubs }}</span><span class="grant-stat-label">{% include t.html key="about_stat_pubs" %}</span></div>
+  <div class="grant-stat"><span class="grant-stat-num">{{ n_grants }}</span><span class="grant-stat-label">{% include t.html key="about_stat_grants" %}</span></div>
+</div>
+
+{% if site.data.about.vision != "" or site.data.about.mission.size > 0 %}
+<section class="about-vm fade-in">
+  {% if site.data.about.vision != "" %}
+  <div class="about-card"><h2 class="about-h">{% include t.html key="about_vision" %}</h2><p>{% include tt.html en=site.data.about.vision id=site.data.about.vision_id %}</p></div>
+  {% endif %}
+  {% if site.data.about.mission.size > 0 %}
+  <div class="about-card"><h2 class="about-h">{% include t.html key="about_mission" %}</h2>
+    <ul class="check-list">
+      {% for m in site.data.about.mission %}{% assign mid = site.data.about.mission_id[forloop.index0] %}<li>{% include tt.html en=m id=mid %}</li>{% endfor %}
+    </ul>
+  </div>
+  {% endif %}
+</section>
+{% endif %}
+
+<section class="fade-in about-section">
+  <h2 class="editorial-heading about-h2">{% include t.html key="about_focus_title" %}</h2>
+  <div class="about-focus">
+    {% for t in site.data.research %}
+    <a href="{{ '/research/' | relative_url }}" class="about-focus-item">
+      <span class="about-focus-icon"><i class="fas fa-{{ t.icon }}" aria-hidden="true"></i></span>
+      <span>{% include tt.html en=t.name id=t.name_id %}</span>
+    </a>
+    {% endfor %}
+  </div>
+</section>
+
+<section class="fade-in about-section">
+  <h2 class="editorial-heading about-h2">{% include t.html key="about_network_title" %}</h2>
+  <div class="about-cols">
+    <div class="about-card">
+      <h3 class="about-h">{% include t.html key="about_funders" %}</h3>
+      <ul class="about-list">
+        {% assign funders = site.data.grants | map: "funder" | uniq %}
+        {% for f in funders %}
+        {% assign g = site.data.grants | where: "funder", f | first %}
+        <li><strong>{% include tt.html en=g.funder id=g.funder_id %}</strong>
+          <span class="about-sub">{% assign schemes = site.data.grants | where: "funder", f | map: "scheme" | uniq | join: ", " %}{{ schemes }}</span></li>
+        {% endfor %}
+      </ul>
+    </div>
+    <div class="about-card">
+      <h3 class="about-h">{% include t.html key="about_collab" %}</h3>
+      <ul class="about-list">
+        {% for c in site.data.about.collaborators %}
+        <li><strong>{% include tt.html en=c.name id=c.name_id %}</strong><span class="about-sub">{% include tt.html en=c.place id=c.place_id %}</span></li>
+        {% endfor %}
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section class="about-cta fade-in">
+  <h2>{% include t.html key="about_cta_title" %}</h2>
+  <p>{% include t.html key="about_cta_text" %}</p>
+  <a href="{{ '/contact/' | relative_url }}" class="btn btn-primary"><i class="fas fa-envelope"></i> {% include t.html key="btn_contact_us" %}</a>
+</section>

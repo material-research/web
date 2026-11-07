@@ -1,0 +1,104 @@
+# Team data. Put photos in assets/img/team/ and set "photo: team/yourfile.webp".
+# Without a photo, the site shows round initials automatically.
+# Fields ending in _id are the Indonesian text.
+# members / alumni are empty until the owner sends real names (sections hide automatically).
+
+director:
+  name: "Dr. Massriyady Massaguni, S.ST., M.T."
+  label: "Research Director"
+  label_id: "Direktur Riset"
+  role: "Lecturer, Agro Industry Manufacturing Engineering, Politeknik ATI Makassar"
+  role_id: "Dosen, Agro Industry Manufacturing Engineering, Politeknik ATI Makassar"
+  photo: "team/massriyady.webp"
+  bio: >-
+    Lecturer at Politeknik ATI Makassar (since 2019) with a Doctorate and Master's
+    degree in Mechanical Engineering from Hasanuddin University. Main expertise is
+    composite materials engineering technology. Develops advanced, environmentally
+    friendly composite materials from plant fibers, agricultural residues, and
+    industrial waste, and supports the development of agro-manufacturing
+    industries.
+  bio_id: >-
+    Dosen di Politeknik ATI Makassar (sejak 2019) bergelar Doktor dan Magister
+    Teknik Mesin dari Universitas Hasanuddin. Kepakaran utama adalah teknologi
+    rekayasa material komposit. Mengembangkan material komposit canggih yang ramah
+    lingkungan dari serat tumbuhan, residu pertanian, dan limbah industri, serta
+    mendukung pengembangan industri manufaktur agro.
+  links:
+    email: "mailto:massriyady.massaguni@atim.ac.id"
+    scholar: "https://scholar.google.com/citations?user=Vtf6TCoAAAAJ&hl=id"
+    orcid: "https://orcid.org/0000-0001-7132-8861"
+    scopus: "https://www.scopus.com/authid/detail.uri?authorId=59703356800"
+    github: ""
+    linkedin: "https://www.linkedin.com/in/massriyady-massaguni-2061008b/"
+    website: ""
+
+# Shown under the profile on the Team page (source: owner's ORCID record).
+education:
+  - degree: "Doctoral Degree, Mechanical Engineering"
+    degree_id: "Doktor, Teknik Mesin"
+    org: "Hasanuddin University, Makassar"
+    org_id: "Universitas Hasanuddin, Makassar"
+    period: "2024–2026"
+  - degree: "Master's Degree, Mechanical Engineering"
+    degree_id: "Magister, Teknik Mesin"
+    org: "Hasanuddin University, Makassar"
+    org_id: "Universitas Hasanuddin, Makassar"
+    period: "2014–2017"
+  - degree: "Bachelor of Applied Science, Mechanical Engineering"
+    degree_id: "Sarjana Terapan, Teknik Mesin"
+    org: "Politeknik Negeri Ujung Pandang, Makassar"
+    org_id: "Politeknik Negeri Ujung Pandang, Makassar"
+    period: "2009–2013"
+
+experience:
+  - role: "Lecturer, Agro Industry Manufacturing Engineering"
+    role_id: "Dosen, Agro Industry Manufacturing Engineering"
+    org: "Politeknik ATI Makassar, South Sulawesi"
+    org_id: "Politeknik ATI Makassar, Sulawesi Selatan"
+    period: "2019–present"
+    period_id: "2019–sekarang"
+  - role: "Lecturer, Mining Machine Maintenance"
+    role_id: "Dosen, Perawatan Mesin Pertambangan"
+    org: "Sinar Mas Berau Coal Polytechnic, East Kalimantan"
+    org_id: "Politeknik Sinar Mas Berau Coal, Kalimantan Timur"
+    period: "2018"
+  - role: "Lecturer, Manufacturing Engineering"
+    role_id: "Dosen, Teknik Manufaktur"
+    org: "Batulicin Polytechnic, South Kalimantan"
+    org_id: "Politeknik Batulicin, Kalimantan Selatan"
+    period: "2018"
+  - role: "Section Head, Production"
+    role_id: "Kepala Seksi, Produksi"
+    org: "PT. Tirta Fresindo Jaya (Mayora Group), Gowa"
+    org_id: "PT. Tirta Fresindo Jaya (Mayora Group), Gowa"
+    period: "2014–2017"
+  - role: "Packaging Operator, Production"
+    role_id: "Operator Packaging, Produksi"
+    org: "PT. Eastern Pearl Flour Mills, Makassar"
+    org_id: "PT. Eastern Pearl Flour Mills, Makassar"
+    period: "2012–2014"
+
+members:
+  - name: "Muhammad Fadli Azis, S.T., M.Sc."
+    role: "Lecturer & Researcher"
+    role_id: "Dosen & Peneliti"
+    focus: "Electrical Power Systems"
+    focus_id: "Sistem Tenaga Listrik"
+    photo: "team/fadli-azis.webp"
+    links: { scholar: "", github: "", linkedin: "" }
+  - name: "Muhammad Nawir, S.T., M.T."
+    role: "Researcher"
+    role_id: "Peneliti"
+    focus: "Industrial Automation"
+    focus_id: "Otomasi Industri"
+    photo: "team/muhammad-nawir-2.webp"
+    links: { scholar: "", github: "", linkedin: "" }
+  - name: "Syardah Ugra Al' Adawiyah, M.Sc."
+    role: "Lecturer & Researcher"
+    role_id: "Dosen & Peneliti"
+    focus: "Environmental Chemistry"
+    focus_id: "Kimia Lingkungan"
+    photo: "team/syardah-ugra-4.webp"
+    links: { scholar: "", github: "", linkedin: "" }
+
+alumni: []

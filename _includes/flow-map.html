@@ -1,0 +1,29 @@
+<section class="section--alt flow-section">
+  <div class="section-inner fade-in">
+    <div class="section-header is-centered"><h2 class="section-title">{% include t.html key="flow_title" %}</h2></div>
+    <p class="editorial-lede is-centered">{% include t.html key="flow_lede" %}</p>
+    <div class="flow" id="flowMap">
+      <div class="flow-track" role="tablist" aria-label="{{ site.data.i18n.flow_title.en }}">
+        <span class="flow-line" aria-hidden="true"><span class="flow-line-fill" id="flowFill"></span></span>
+        {% for s in site.data.flow %}
+        <button type="button" class="flow-node{% if forloop.first %} is-active{% endif %}" role="tab" id="flowTab{{ forloop.index }}" aria-controls="flowPanel{{ forloop.index }}" aria-selected="{% if forloop.first %}true{% else %}false{% endif %}" data-step="{{ forloop.index0 }}">
+          <span class="flow-dot"><i class="fas fa-{{ s.icon }}" aria-hidden="true"></i></span>
+          <span class="flow-short">{% include tt.html en=s.short id=s.short_id %}</span>
+        </button>
+        {% endfor %}
+      </div>
+      <div class="flow-panels">
+        {% for s in site.data.flow %}
+        <div class="flow-panel{% if forloop.first %} is-active{% endif %}" role="tabpanel" id="flowPanel{{ forloop.index }}" aria-labelledby="flowTab{{ forloop.index }}">
+          <p class="flow-step-no">{% include t.html key="flow_step" %} {{ forloop.index }} / {{ site.data.flow.size }}</p>
+          <h3 class="flow-title">{% include tt.html en=s.title id=s.title_id %}</h3>
+          <p class="flow-text">{% include tt.html en=s.text id=s.text_id %}</p>
+          <ul class="flow-chips">
+            {% for c in s.chips %}{% assign ci = forloop.index0 %}{% assign cid = s.chips_id[ci] %}<li>{% include tt.html en=c id=cid %}</li>{% endfor %}
+          </ul>
+        </div>
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+</section>

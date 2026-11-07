@@ -1,0 +1,14 @@
+{%- assign post = include.post -%}
+{%- assign hl = include.hl | default: "h2" -%}
+<article class="blog-card fade-in">
+  <a href="{{ post.url | relative_url }}" class="blog-thumb-link" aria-label="{{ post.title }}" tabindex="-1">
+    {% include post-cover.html item=post cls="blog-thumb" card=true eager=include.eager %}
+  </a>
+  <div class="blog-card-body">
+    <p class="blog-card-meta">{% include date-long.html d=post.date %}</p>
+    <{{ hl }} class="blog-card-title"><a href="{{ post.url | relative_url }}" class="card-stretch">{% include tt.html en=post.title id=post.title_id %}</a></{{ hl }}>
+    {% assign ex_en = post.summary | default: post.excerpt | strip_html | strip | truncate: 160 %}{% assign ex_id = post.summary_id | default: ex_en %}
+    <p class="blog-card-excerpt">{% include tt.html en=ex_en id=ex_id %}</p>
+    <p class="card-read">{% include t.html key="news_read" %} <i class="fas fa-arrow-right" aria-hidden="true"></i></p>
+  </div>
+</article>

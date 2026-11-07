@@ -1,0 +1,253 @@
+# Publications, imported from the owner's Google Scholar profile (2026-11-05).
+# theme: 1..4 (see _data/pub_themes.yml). DOIs added for the 8 works listed on ORCID (2026-11-05); other entries still have no DOI.
+# Skipped: 'Rancang Bangun Disk Runner Turbin Cross Flow 20 kW ... CNC Milling 3 Axis' (no year/venue on Scholar).
+
+- title: "Enhancing mechanical strength of bamboo parring (Gigantochloa Atter) fiber with alkaline treatment for flame-retardant composite"
+  authors: "M Massaguni, Z Djafar, R Zulkifli, LH Arma"
+  venue: "Discover Materials"
+  detail: "5(1): 136"
+  year: 2025
+  theme: 1
+  url: "https://doi.org/10.1007/s43939-025-00295-7"
+  pdf: ""
+  code: ""
+
+- title: "Multi-factorial analysis and optimization of delamination damage parameters in the drilling of woven ramie/epoxy resin composite"
+  authors: "T Zulkifli, Z Djafar, M Massaguni"
+  venue: "International Journal of Automotive and Mechanical Engineering"
+  detail: "23(1): 13356"
+  year: 2026
+  theme: 1
+  url: "https://doi.org/10.15282/ijame.23.1.2026.15.1013"
+  pdf: ""
+  code: ""
+
+- title: "Adhesion Strength of Parring Bamboo (Gigantochloa atter) Fiber With Flame Retardant Polyester Resin: Wettability"
+  authors: "M Massaguni, Z Djafar, R Zulkifli, LH Arma"
+  venue: "Material Design & Processing Communications"
+  detail: "2025(1): 7886553"
+  year: 2025
+  theme: 1
+  url: "https://doi.org/10.1155/mdp2/7886553"
+  pdf: ""
+  code: ""
+
+- title: "Parring bamboo (Gigantochloa atter) composites as alternatives for safety cabin panels"
+  authors: "M Massaguni, Z Djafar, R Zulkifli, LH Arma"
+  venue: "Journal of Metals, Materials and Minerals"
+  detail: "36(4): e2563"
+  year: 2026
+  theme: 1
+  url: ""
+  pdf: ""
+  code: ""
+
+- title: "Synergistic Effect of Flame Retardant Inhibitors and Bamboo Fiber Reinforcement in Epoxy-Based Composites"
+  authors: "M Massaguni, Z Djafar, R Zulkifli, L Hakim Arma"
+  venue: "Epoxy - Materials, Applications and Advanced Technologies"
+  year: 2025
+  theme: 1
+  url: ""
+  pdf: ""
+  code: ""
+
+- title: "Analisis Kekuatan Bending Komposit Waru (Hibiscus Tiliaceus) Bermatriks Epoksi Resin Dengan Media Perendaman Air Laut"
+  authors: "P Pitriadi, M Massaguni"
+  venue: "Majalah Teknik Industri"
+  detail: "27(2): 25-31"
+  year: 2019
+  theme: 1
+  url: ""
+  pdf: ""
+  code: ""
+
+- title: "Advancements in Bamboo-Based Cushioning Material Manufacturing"
+  authors: "M Massaguni, M Irwan"
+  venue: "INTEK: Jurnal Penelitian"
+  detail: "11(2): 83-87"
+  year: 2024
+  theme: 1
+  url: "https://doi.org/10.31963/intek.v11i2.5067"
+  pdf: ""
+  code: ""
+
+- title: "Karakterisasi Komposit Bambu Parring (Gigantochloa Atter) Bermatriks Flame-Retardant Polyester untuk Safety Cabin"
+  authors: "M Massaguni"
+  venue: "Universitas Hasanuddin"
+  year: 2026
+  theme: 1
+  status: "Doctoral Dissertation"
+  url: ""
+  pdf: ""
+  code: ""
+
+- title: "Engineering innovation for cherry coffee wet processing using circulation system and agitator grading machine"
+  authors: "Z Djafar, WH Piarah, Z Djafar, M Massaguni"
+  venue: "Coffee Science"
+  detail: "20: e202276"
+  year: 2025
+  theme: 2
+  url: "https://doi.org/10.25186/.v20i.2276"
+  pdf: ""
+  code: ""
+
+- title: "Automation In Wet Coffee Processing For Zero Liquid Waste"
+  authors: "M Massaguni, W Mudriadi, ML Sonjaya, MF Azis, MNH Amaluddin"
+  venue: "Coffee Science"
+  detail: "21: e212413"
+  year: 2026
+  theme: 2
+  url: "https://doi.org/10.25186/.v21i.2413"
+  pdf: ""
+  code: ""
+
+- title: "Inovasi Mesin Pengupas Kulit Ari Kelapa untuk Meningkatkan Kualitas dan Produktivitas Pengolahan Kelapa"
+  authors: "M Massaguni, E Sulfiana, M Dahlan"
+  venue: "Agrikultura"
+  detail: "36(3): 471-478"
+  year: 2025
+  theme: 2
+  url: "https://doi.org/10.24198/agrikultura.v36i3.63401"
+  pdf: ""
+  code: ""
+
+- title: "Rancang Bangun Mesin 2 in 1 Pemarut dan Pemeras Jahe"
+  authors: "FM Izzulhaq, MM Massaguni"
+  venue: "Journal of Energy, Materials, & Manufacturing Technology"
+  detail: "2(01): 8-14"
+  year: 2023
+  theme: 2
+  url: ""
+  pdf: ""
+  code: ""
+
+- title: "Rancang Bangun Mesin Grading Buah Kopi dengan Metode Back Wash Circulation pada Proses Pengolahan Basah"
+  authors: "M Massaguni, W Mudriadi"
+  venue: "Prosiding Seminar Nasional Teknologi Industri (SNTI)"
+  detail: "9(1): 290-294"
+  year: 2022
+  theme: 2
+  url: ""
+  pdf: ""
+  code: ""
+
+- title: "A Review of Rice Grinding Machine Based on Cold Plasma Technology to Optimize Rice Husk Separation and Minimize Dust"
+  authors: "A Al-Bisyah, M Massaguni"
+  venue: "JEAT: Journal of Electrical and Automation Technology"
+  detail: "3(2): 48-55"
+  year: 2024
+  theme: 2
+  url: ""
+  pdf: ""
+  code: ""
+
+- title: "A Review of Electric Corn Thresher Machine for Post-Harvest Efficiency of Small-Scale Corn Farmers"
+  authors: "M Massaguni"
+  venue: "JEAT: Journal of Electrical and Automation Technology"
+  detail: "3(2): 36-47"
+  year: 2024
+  theme: 2
+  url: ""
+  pdf: ""
+  code: ""
+
+- title: "Review Of The Utilization Of Diesel Engines As Drivers For Rice Milling Machines"
+  authors: "TDH Desto, M Massaguni"
+  venue: "JEAT: Journal of Electrical and Automation Technology"
+  detail: "3(1): 29-35"
+  year: 2024
+  theme: 2
+  url: ""
+  pdf: ""
+  code: ""
+
+- title: "Reducing cycle time in the manufacturing process of circular pattern interpolar products (CPIP) using special fixtures on a 3-axis CNC machine"
+  authors: "ML Sonjaya, M Massaguni, MNH Amaluddin"
+  venue: "INTEK: Jurnal Penelitian"
+  detail: "10(2): 131-136"
+  year: 2023
+  theme: 3
+  url: "https://doi.org/10.31963/intek.v10i2.4439"
+  pdf: ""
+  code: ""
+
+- title: "Analisis Faktor Keamanan Dan Distribusi Tegangan Balok Profil-I Baja AISI 304 Pada Pembebanan Terpusat Menggunakan Simulasi FEM Solidworks"
+  authors: "MNH Amaluddin, M Massaguni, Z Santo Bandaso, F Fahri"
+  venue: "Majamecha"
+  detail: "7(2): 363-372"
+  year: 2025
+  theme: 3
+  url: ""
+  pdf: ""
+  code: ""
+
+- title: "Perancangan Program Manufaktur untuk Produksi Massal Engsel Baja Menggunakan Mesin CNC 2-Axis Mazak Quick Turn Smart 150 S"
+  authors: "M Massaguni"
+  venue: "Prosiding Seminar Nasional Teknologi Industri (SNTI)"
+  detail: "10(1): 363-369"
+  year: 2023
+  theme: 3
+  url: ""
+  pdf: ""
+  code: ""
+
+- title: "Drive Motor Systems in Industrial Machines: Performance, Efficiency, and Safety Evaluation Based on Literature Review"
+  authors: "S Awal, M Massaguni"
+  venue: "JEAT: Journal of Electrical and Automation Technology"
+  detail: "3(2): 74-81"
+  year: 2024
+  theme: 4
+  url: ""
+  pdf: ""
+  code: ""
+
+- title: "A Water Pump Efficiency With Automatic Sensors To Increase Operational Efficiency"
+  authors: "M Massaguni"
+  venue: "JEAT: Journal of Electrical and Automation Technology"
+  detail: "3(2): 56-65"
+  year: 2024
+  theme: 4
+  url: ""
+  pdf: ""
+  code: ""
+
+- title: "Rancang Bangun dan Analisis Biaya Teoritis Turbin Cross Flow Kapasitas 2500 Watt, Makassar"
+  authors: "M Iswar, S Rasyid, M Massaguni, M Rizal"
+  venue: "Jurnal Teknik Mesin Sinergi"
+  detail: "13(1): 17-30"
+  year: 2015
+  theme: 4
+  url: ""
+  pdf: ""
+  code: ""
+
+- title: "Perancangan dan Simulasi Pembuatan Disk Runner Turbin Cross Flow Kapasitas 20 kW Menggunakan Software Cut Viewer"
+  authors: "M Massaguni, P Pitriadi"
+  venue: "Prosiding Seminar Nasional Teknologi Industri (SNTI)"
+  detail: "8(1): 325-329"
+  year: 2021
+  theme: 4
+  url: ""
+  pdf: ""
+  code: ""
+
+- title: "Simulation Automatic Fuel Refiller For Standby Genset"
+  authors: "M Massaguni, P Pitriadi"
+  venue: "Majalah Teknik Industri"
+  detail: "29(1): 52-55"
+  year: 2021
+  theme: 4
+  url: ""
+  pdf: ""
+  code: ""
+
+- title: "Pengembangan Kincir Angin Sumbu Vertikal Tipe Sudu 90°"
+  authors: "P Pitriadi, M Massaguni"
+  venue: "Majalah Teknik Industri"
+  detail: "28(1): 60-65"
+  year: 2020
+  theme: 4
+  url: ""
+  pdf: ""
+  code: ""
+

@@ -1,0 +1,52 @@
+<footer class="site-footer">
+  <div class="footer-pattern" aria-hidden="true"></div>
+  <div class="footer-inner">
+    <div class="footer-brand">
+      <a href="{{ '/' | relative_url }}" class="footer-logo"><img src="{{ '/assets/img/logo-small.webp' | relative_url }}" alt="" width="52" height="52"><span>{{ site.title }}</span></a>
+      <p>{% include tt.html en=site.tagline id=site.tagline_id %}</p>
+      <p class="footer-affil">
+        <a href="{{ site.lab.institution_url }}" target="_blank" rel="noopener">{{ site.lab.institution }}</a>
+      </p>
+    </div>
+    <div class="footer-col">
+      <h4>{% include t.html key="footer_explore" %}</h4>
+      <ul>
+        <li><a href="{{ '/about/' | relative_url }}">{% include t.html key="nav_about" %}</a></li>
+        <li><a href="{{ '/research/' | relative_url }}">{% include t.html key="nav_research" %}</a></li>
+        <li><a href="{{ '/team/' | relative_url }}">{% include t.html key="nav_team" %}</a></li>
+        <li><a href="{{ '/publications/' | relative_url }}">{% include t.html key="nav_publications" %}</a></li>
+        {% if site.show_pages.grants %}<li><a href="{{ '/grants/' | relative_url }}">{% include t.html key="nav_grants" %}</a></li>{% endif %}
+        <li><a href="{{ '/blog/' | relative_url }}">{% include t.html key="nav_blog" %}</a></li>
+        {% unless show_lab_col %}<li><a href="{{ '/contact/' | relative_url }}">{% include t.html key="nav_contact" %}</a></li>{% endunless %}
+      </ul>
+    </div>
+    {% assign show_lab_col = false %}
+    {% if site.show_pages.resources or site.show_pages.calendar or site.show_pages.apply %}{% assign show_lab_col = true %}{% endif %}
+    {% if show_lab_col %}
+    <div class="footer-col">
+      <h4>{% include t.html key="footer_lab" %}</h4>
+      <ul>
+        {% if site.show_pages.resources %}<li><a href="{{ '/resources/' | relative_url }}">{% include t.html key="nav_resources" %}</a></li>{% endif %}
+        {% if site.show_pages.calendar %}<li><a href="{{ '/deadlines/' | relative_url }}">{% include t.html key="nav_calendar" %}</a></li>{% endif %}
+        {% if site.show_pages.apply %}<li><a href="{{ '/apply/' | relative_url }}">{% include t.html key="nav_apply" %}</a></li>{% endif %}
+        <li><a href="{{ '/contact/' | relative_url }}">{% include t.html key="nav_contact" %}</a></li>
+      </ul>
+    </div>
+    {% endif %}
+    <div class="footer-col">
+      <h4>{% include t.html key="footer_connect" %}</h4>
+      <ul class="footer-social">
+        <li><a href="mailto:{{ site.lab.email }}"><i class="fas fa-envelope" aria-hidden="true"></i> Email</a></li>
+        <li><a href="{{ site.lab.institution_url }}" target="_blank" rel="noopener"><i class="fas fa-globe" aria-hidden="true"></i> {% include t.html key="footer_campus" %}</a></li>
+        {% if site.lab.social.github != "" %}<li><a href="{{ site.lab.social.github }}" target="_blank" rel="noopener"><i class="fab fa-github" aria-hidden="true"></i> GitHub</a></li>{% endif %}
+        {% if site.lab.social.scholar != "" %}<li><a href="{{ site.lab.social.scholar }}" target="_blank" rel="noopener"><i class="fas fa-graduation-cap" aria-hidden="true"></i> Scholar</a></li>{% endif %}
+        {% if site.lab.social.linkedin != "" %}<li><a href="{{ site.lab.social.linkedin }}" target="_blank" rel="noopener"><i class="fab fa-linkedin" aria-hidden="true"></i> LinkedIn</a></li>{% endif %}
+        {% if site.lab.social.instagram != "" %}<li><a href="{{ site.lab.social.instagram }}" target="_blank" rel="noopener"><i class="fab fa-instagram" aria-hidden="true"></i> Instagram</a></li>{% endif %}
+        {% if site.lab.social.x != "" %}<li><a href="{{ site.lab.social.x }}" target="_blank" rel="noopener"><i class="fab fa-x-twitter" aria-hidden="true"></i> X</a></li>{% endif %}
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>&copy; {{ 'now' | date: '%Y' }} {{ site.title }}. {% include tt.html en=site.lab.department id=site.lab.department_id %}, {{ site.lab.institution }}.</p>
+  </div>
+</footer>

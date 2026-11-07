@@ -1,0 +1,26 @@
+---
+layout: page
+title: Calendar
+title_id: Kalender
+subtitle: Deadlines and events
+subtitle_id: Tenggat dan acara
+lede: Upcoming conference, journal, and grant deadlines, plus lab events. Edit _data/deadlines.yml to change this list.
+lede_id: Tenggat konferensi, jurnal, dan hibah yang akan datang, serta acara lab. Ubah _data/deadlines.yml untuk mengganti daftar ini.
+permalink: /deadlines/
+---
+{% assign items = site.data.deadlines | sort: "date" %}
+<ul class="deadline-list" id="deadlineList">
+  {% for d in items %}
+  {% assign type_key = "type_" | append: d.type %}
+  <li class="deadline-item deadline--{{ d.type }}" data-date="{{ d.date | date: '%Y-%m-%d' }}">
+    <div class="deadline-date">
+      <span class="deadline-day">{{ d.date | date: "%-d" }}</span>
+      <span class="deadline-month">{{ d.date | date: "%b %Y" }}</span>
+    </div>
+    <div class="deadline-body">
+      <p class="deadline-title">{% if d.url != "" %}<a href="{{ d.url }}" target="_blank" rel="noopener">{% include tt.html en=d.title id=d.title_id %}</a>{% else %}{% include tt.html en=d.title id=d.title_id %}{% endif %}</p>
+      <p class="deadline-meta"><span class="deadline-type">{% include t.html key=type_key %}</span> <span class="deadline-count"></span></p>
+    </div>
+  </li>
+  {% endfor %}
+</ul>

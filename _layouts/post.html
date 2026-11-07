@@ -1,0 +1,18 @@
+---
+layout: default
+---
+<article class="container post" style="padding-top: 3rem; max-width: 760px;">
+  <a href="{{ '/blog/' | relative_url }}" class="post-back"><i class="fas fa-arrow-left" aria-hidden="true"></i> {% include t.html key="all_posts" %}</a>
+  <header class="post-header fade-in">
+    <h1>{% include tt.html en=page.title id=page.title_id %}</h1>
+    <p class="post-meta">
+      <time datetime="{{ page.date | date_to_xmlschema }}">{% include date-long.html d=page.date %}</time>
+      {% if page.author %}&middot; {{ page.author }}{% endif %}
+      {% if page.tags %}&middot; {% for tag in page.tags %}{% assign tg_id = page.tags_id[forloop.index0] | default: tag %}<span class="post-tag">{% include tt.html en=tag id=tg_id %}</span>{% endfor %}{% endif %}
+    </p>
+  </header>
+  <div class="post-cover fade-in">{% include post-cover.html item=page cls="post-cover-media" eager=true %}</div>
+  <div class="post-body">
+    {{ content }}
+  </div>
+</article>

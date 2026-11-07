@@ -1,0 +1,30 @@
+# Research themes used by the publication filters (colour dots are in main.css).
+# Fields ending in _id are the Indonesian text.
+- id: 1
+  name: Composite Materials Engineering
+  name_id: Teknologi Rekayasa Material Komposit
+  short: Composites
+  short_id: Komposit
+  desc: Composites from plant-based materials such as bamboo and ramie, fiber treatment, wettability, and flame retardancy.
+  desc_id: Komposit dari bahan nabati seperti bambu dan rami, perlakuan serat, keterbasahan, dan ketahanan api.
+- id: 2
+  name: Agro-Processing Machinery
+  name_id: Mesin Pengolahan Agro
+  short: Agro Machinery
+  short_id: Mesin Agro
+  desc: Machines for coffee, coconut, ginger, rice, and corn processing.
+  desc_id: Mesin pengolahan kopi, kelapa, jahe, padi, dan jagung.
+- id: 3
+  name: Manufacturing, CNC & Simulation
+  name_id: Manufaktur, CNC & Simulasi
+  short: Manufacturing
+  short_id: Manufaktur
+  desc: CNC machining, fixtures, process planning, and FEM simulation.
+  desc_id: Pemesinan CNC, jig dan fixture, perencanaan proses, dan simulasi FEM.
+- id: 4
+  name: Energy & Drive Systems
+  name_id: Energi & Sistem Penggerak
+  short: Energy & Drives
+  short_id: Energi & Penggerak
+  desc: Cross-flow and wind turbines, drive motors, pumps, and generator automation.
+  desc_id: Turbin cross flow dan angin, motor penggerak, pompa, dan otomasi genset.

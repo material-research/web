@@ -1,0 +1,1 @@
+{%- comment -%}Inline bilingual text: {% include tt.html en=x.field id=x.field_id %}. Falls back to English when the Indonesian text is empty.{%- endcomment -%}<span data-lang="en">{{ include.en }}</span><span data-lang="id">{{ include.id | default: include.en }}</span>

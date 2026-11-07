@@ -1,0 +1,53 @@
+# Featured research directions (home page cards), drawn from the group's publications.
+# Fields ending in _id are the Indonesian text. image/video optional (see assets/img, assets/media).
+
+- id: bamboo-safety-cabin
+  illus: bamboo
+  iso: true
+  title: Flame-Retardant Parring Bamboo Composites for Safety Cabins
+  title_id: Komposit Bambu Parring Tahan Api untuk Safety Cabin
+  image: ""
+  video: ""
+  desc: >-
+    Alkaline treatment of parring bamboo (Gigantochloa atter) fiber, its wettability
+    and adhesion with flame-retardant polyester and epoxy resins, and the use of
+    the composite as safety cabin panels.
+  desc_id: >-
+    Perlakuan alkali serat bambu parring (Gigantochloa atter), keterbasahan dan
+    adhesinya dengan resin poliester dan epoksi tahan api, serta pemanfaatan
+    komposit sebagai panel safety cabin.
+  links: []
+  thrusts: ["Composites"]
+  thrusts_id: ["Komposit"]
+- id: coffee-processing
+  illus: coffee
+  iso: true
+  title: Wet Coffee Processing Machines
+  title_id: Mesin Pengolahan Basah Kopi
+  image: ""
+  video: ""
+  desc: >-
+    Circulation-based grading and agitator machines for cherry coffee wet
+    processing, and automation aimed at zero liquid waste.
+  desc_id: >-
+    Mesin grading dan agitator berbasis sirkulasi untuk pengolahan basah buah
+    kopi, serta otomasi untuk mencapai nol limbah cair.
+  links: []
+  thrusts: ["Agro Machinery"]
+  thrusts_id: ["Mesin Agro"]
+- id: coconut-ginger
+  illus: coconut
+  iso: true
+  title: Coconut and Ginger Processing Machines
+  title_id: Mesin Pengolahan Kelapa dan Jahe
+  image: ""
+  video: ""
+  desc: >-
+    A coconut skin peeler to improve quality and productivity, and a 2-in-1
+    ginger grating and pressing machine.
+  desc_id: >-
+    Mesin pengupas kulit ari kelapa untuk meningkatkan mutu dan produktivitas,
+    serta mesin 2 in 1 pemarut dan pemeras jahe.
+  links: []
+  thrusts: ["Agro Machinery", "Manufacturing"]
+  thrusts_id: ["Mesin Agro", "Manufaktur"]

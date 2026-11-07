@@ -1,0 +1,79 @@
+---
+layout: page
+title: Team
+title_id: Tim
+subtitle: Meet the people in the group
+subtitle_id: Kenali orang-orang di kelompok riset
+lede: Researchers at Politeknik ATI Makassar working on agromaterials, composites, and manufacturing engineering.
+lede_id: Peneliti di Politeknik ATI Makassar yang bekerja pada agromaterial, komposit, dan teknik manufaktur.
+description: The research director and members of the Agromaterials Research Group at Politeknik ATI Makassar.
+permalink: /team/
+---
+{% assign d = site.data.team.director %}
+<div class="pi-section fade-in">
+  <div class="pi-photo-wrap">
+    {% if d.photo != "" %}
+    <img src="{{ '/assets/img/' | append: d.photo | relative_url }}" alt="{{ d.name }}" class="pi-photo">
+    {% else %}
+    <div class="pi-photo pi-photo--initials" aria-hidden="true">{{ d.name | remove: "Dr. " | slice: 0 }}</div>
+    {% endif %}
+  </div>
+  <div class="pi-content">
+    <span class="pi-label">{% include tt.html en=d.label id=d.label_id %}</span>
+    <h2 class="pi-name">{{ d.name }}</h2>
+    <p class="pi-role">{% include tt.html en=d.role id=d.role_id %}</p>
+    <p class="pi-bio">{% include tt.html en=d.bio id=d.bio_id %}</p>
+    <div class="pi-links">
+      {% if d.links.email != "" %}<a href="{{ d.links.email }}"><i class="fas fa-envelope"></i> Email</a>{% endif %}
+      {% if d.links.scholar != "" %}<a href="{{ d.links.scholar }}" target="_blank" rel="noopener"><i class="fas fa-graduation-cap"></i> Scholar</a>{% endif %}
+      {% if d.links.orcid != "" and d.links.orcid %}<a href="{{ d.links.orcid }}" target="_blank" rel="noopener"><i class="fab fa-orcid"></i> ORCID</a>{% endif %}
+      {% if d.links.scopus %}<a href="{{ d.links.scopus }}" target="_blank" rel="noopener"><i class="fas fa-database"></i> Scopus</a>{% endif %}
+      {% if d.links.github != "" %}<a href="{{ d.links.github }}" target="_blank" rel="noopener"><i class="fab fa-github"></i> GitHub</a>{% endif %}
+      {% if d.links.linkedin != "" %}<a href="{{ d.links.linkedin }}" target="_blank" rel="noopener"><i class="fab fa-linkedin"></i> LinkedIn</a>{% endif %}
+      {% if d.links.website != "" %}<a href="{{ d.links.website }}" target="_blank" rel="noopener"><i class="fas fa-globe"></i> Website</a>{% endif %}
+    </div>
+  </div>
+</div>
+
+{% if site.data.team.members.size > 0 %}
+<div style="height: 2.5rem;" aria-hidden="true"></div>
+
+<div class="fade-in">
+  <h2 class="editorial-heading" style="font-size: 1.5rem;">{% include t.html key="members_title" %}</h2>
+  <div class="team-list">
+    {% for m in site.data.team.members %}
+    <div class="team-member">
+      {% if m.photo != "" %}
+      <img src="{{ '/assets/img/' | append: m.photo | relative_url }}" alt="{{ m.name }}" class="team-member-photo" loading="lazy">
+      {% else %}
+      <div class="team-member-photo team-member-photo--initials" aria-hidden="true">{{ m.name | slice: 0 }}</div>
+      {% endif %}
+      <div class="team-member-info">
+        <h3 class="team-member-name">{{ m.name }}</h3>
+        <p class="team-member-role">{% include tt.html en=m.role id=m.role_id %}</p>
+        {% if m.focus %}<p class="team-member-focus">{% include tt.html en=m.focus id=m.focus_id %}</p>{% endif %}
+        <div class="team-member-links">
+          {% if m.links.scholar != "" %}<a href="{{ m.links.scholar }}" target="_blank" rel="noopener" aria-label="Scholar"><i class="fas fa-graduation-cap"></i></a>{% endif %}
+          {% if m.links.github != "" %}<a href="{{ m.links.github }}" target="_blank" rel="noopener" aria-label="GitHub"><i class="fab fa-github"></i></a>{% endif %}
+          {% if m.links.linkedin != "" %}<a href="{{ m.links.linkedin }}" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>{% endif %}
+        </div>
+      </div>
+    </div>
+    {% endfor %}
+  </div>
+</div>
+{% endif %}
+
+{% if site.data.team.alumni.size > 0 %}
+<div style="height: 2.5rem;" aria-hidden="true"></div>
+<div class="fade-in">
+  <h2 class="editorial-heading" style="font-size: 1.5rem;">{% include t.html key="alumni_title" %}</h2>
+  <ul class="alumni-list">
+    {% for a in site.data.team.alumni %}
+    <li><strong>{{ a.name }}</strong> &mdash; {% include tt.html en=a.role id=a.role_id %}{% if a.now %}. <span class="alumni-now">{% include tt.html en=a.now id=a.now_id %}</span>{% endif %}</li>
+    {% endfor %}
+  </ul>
+</div>
+{% endif %}
+
+{% include cta.html %}

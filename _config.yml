@@ -1,0 +1,85 @@
+# ============================================================
+#  Material Lab — Jekyll site configuration
+#  Edit the values below to match your lab.
+# ============================================================
+
+title: Agromaterials Research Group
+tagline: Composite materials engineering and agro-industry machinery for sustainable manufacturing
+description: >-
+  Agromaterials Research Group, Politeknik ATI Makassar: composite materials
+  engineering from plant-based resources, agro-processing machinery, manufacturing
+  and CNC, and energy and drive systems.
+tagline_id: Rekayasa material komposit dan mesin industri agro untuk manufaktur berkelanjutan
+description_id: >-
+  Agromaterials Research Group, Politeknik ATI Makassar: rekayasa material
+  komposit berbahan nabati, mesin pengolahan agro, manufaktur dan CNC, serta energi
+  dan sistem penggerak.
+lang: en        # default language; visitors switch with the EN | ID button
+author: Agromaterials Research Group
+
+# --- Address of the site --------------------------------------------------
+# While testing at https://material-research.github.io/web/ use:
+#   url:     https://material-research.github.io
+#   baseurl: /web
+#
+# When you switch to a custom domain (e.g. material-research.atim.ac.id) use:
+#   url:     https://material-research.atim.ac.id
+#   baseurl: ""
+# and add a file named CNAME at the repo root containing that domain.
+url: https://material-research.github.io
+baseurl: /web
+
+# --- Lab details used in footer, contact page, and structured data ---------
+lab:
+  nav_name: Agromaterials Research Group   # text beside the logo in the navbar
+  email: agromaterialsrg@atim.ac.id
+  institution: Politeknik ATI Makassar
+  institution_url: https://atim.ac.id
+  department: Agro Industry Manufacturing Engineering
+  department_id: Agro Industry Manufacturing Engineering
+  address_line1: Politeknik ATI Makassar
+  address_line2: Makassar, Indonesia
+  # Reference USD/IDR rate shown only when the live rate cannot be fetched (update now and then)
+  # Optional: link of a Google Sheet "published to the web" as CSV whose cell A1 is =GOOGLEFINANCE("CURRENCY:USDIDR"); tried before the other rate services
+  usd_idr_sheet: ""
+  usd_idr_fallback: 18100
+  usd_idr_fallback_date: "2026-11-06"
+  # Contact form (Web3Forms, free). Paste the access key that Web3Forms emails to agromaterialsrg@atim.ac.id.
+  # Empty = the form is hidden and the Contact page shows the email address only. The key is meant to be public.
+  contact_form_key: "62380007-bdad-41ad-a663-1cab946c67e9"
+  social:
+    github: ""
+    scholar: ""
+    linkedin: ""
+    instagram: ""
+    x: ""
+
+# --- Optional pages -------------------------------------------------------
+# Hidden for now. To bring a page back: set its flag to true AND remove its file
+# from the `exclude:` list below (resources.html, deadlines.html, apply.html).
+show_pages:
+  grants: true
+  resources: false
+  calendar: false
+  apply: false
+
+# --- Build settings --------------------------------------------------------
+markdown: kramdown
+future: true      # publish posts even if their date is later than today
+permalink: /blog/:year/:month/:day/:title/
+plugins:
+  - jekyll-sitemap
+
+exclude:
+  - resources.html   # hidden page (see show_pages)
+  - deadlines.html   # hidden page (see show_pages)
+  - apply.html       # hidden page (see show_pages)
+  - README.md
+  - LICENSE
+  - docs
+  - tools
+  - CLAUDE.md
+  - HANDOFF.md
+  - Gemfile
+  - Gemfile.lock
+  - vendor

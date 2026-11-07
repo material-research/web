@@ -1,0 +1,66 @@
+---
+layout: page
+title: Research
+title_id: Riset
+subtitle: What we work on and why it matters
+subtitle_id: Apa yang kami kerjakan dan mengapa penting
+lede: Our main field is composite materials engineering, alongside agro-processing machinery, manufacturing and CNC, and energy and drive systems.
+lede_id: Bidang utama kami adalah rekayasa material komposit, di samping mesin pengolahan agro, manufaktur dan CNC, serta energi dan sistem penggerak.
+description: Research areas of the Agromaterials Research Group, led by composite materials engineering from plant-based resources, with agro-processing machinery, CNC manufacturing, and energy systems.
+permalink: /research/
+---
+<nav class="res-nav" aria-label="{{ site.data.i18n.res_jump.en }}">
+  <span class="res-nav-label">{% include t.html key="res_jump" %}</span>
+  {% for t in site.data.research %}<a href="#{{ t.anchor }}" class="res-nav-link"><span class="res-nav-num">{{ forloop.index }}</span>{% include tt.html en=t.short id=t.short_id %}</a>{% endfor %}
+</nav>
+
+<div class="res-list-wrap">
+{% for t in site.data.research %}
+<section id="{{ t.anchor }}" class="res-card fade-in">
+  <header class="res-head">
+    <span class="res-num">0{{ forloop.index }}</span>
+    <h2 class="res-title"><i class="fas fa-{{ t.icon }}" aria-hidden="true"></i> {% include tt.html en=t.name id=t.name_id %}</h2>
+    {% if t.main %}<span class="res-badge"><i class="fas fa-star" aria-hidden="true"></i> {% include t.html key="res_main" %}</span>{% endif %}
+  </header>
+  <div class="res-body">
+    <div class="res-side">
+      <div class="res-figure{% if t.iso %} res-figure--iso{% endif %}" aria-hidden="true">{% if t.illus == 'composites' %}{% if t.iso %}{% include illus/composites-iso.html %}{% else %}{% include illus/composites.html %}{% endif %}{% elsif t.illus == 'agro' %}{% if t.iso %}{% include illus/agro-iso.html %}{% else %}{% include illus/agro.html %}{% endif %}{% elsif t.illus == 'cnc' %}{% if t.iso %}{% include illus/cnc-iso.html %}{% else %}{% include illus/cnc.html %}{% endif %}{% elsif t.illus == 'energy' %}{% if t.iso %}{% include illus/energy-iso.html %}{% else %}{% include illus/energy.html %}{% endif %}{% endif %}</div>
+      <div class="res-extra">
+      {% if t.materials %}
+      {% if t.materials_label == "commodities" %}{% assign mat_key = "res_commodities" %}{% else %}{% assign mat_key = "res_materials" %}{% endif %}
+      <h3 class="res-h">{% include t.html key=mat_key %}</h3>
+      <ul class="res-chips">
+        {% for m in t.materials %}<li class="res-chip{% if m.planned %} res-chip--planned{% endif %}">{% include tt.html en=m.en id=m.id %}{% if m.planned %} <em>{% include t.html key="res_planned" %}</em>{% endif %}</li>{% endfor %}
+      </ul>
+      {% endif %}
+
+      {% if t.next %}
+      <h3 class="res-h">{% include t.html key="res_next" %}</h3>
+      <p class="res-next">{% include tt.html en=t.next id=t.next_id %}</p>
+      {% endif %}
+      </div>
+    </div>
+    <div class="res-info">
+      <p class="res-desc">{% include tt.html en=t.desc id=t.desc_id %}</p>
+
+      {% if t.topics %}
+      <h3 class="res-h">{% include t.html key="res_topics" %}</h3>
+      <ul class="res-topics">
+        {% for x in t.topics %}{% assign xi = t.topics_id[forloop.index0] %}<li>{% include tt.html en=x id=xi %}</li>{% endfor %}
+      </ul>
+      {% endif %}
+
+      {% if t.apps %}
+      <h3 class="res-h">{% include t.html key="res_apps" %}</h3>
+      <ul class="res-topics res-apps">
+        {% for x in t.apps %}{% assign xi = t.apps_id[forloop.index0] %}<li>{% include tt.html en=x id=xi %}</li>{% endfor %}
+      </ul>
+      {% endif %}
+
+    </div>
+  </div>
+</section>
+{% endfor %}
+</div>
+
+{% include cta.html %}

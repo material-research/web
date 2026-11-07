@@ -1,0 +1,40 @@
+---
+layout: null
+sitemap: false
+---
+[
+{%- assign first = true -%}
+{%- assign pg_list = "about,research,team,publications,grants,blog,contact" | split: "," -%}
+{%- for pg in site.pages -%}
+  {%- if pg.title and pg.permalink and pg.permalink != "/" and pg.permalink != "/search.json" -%}
+    {%- assign pslug = pg.permalink | remove: "/" -%}
+    {%- if pg_list contains pslug -%}
+{%- unless first -%},{%- endunless -%}{%- assign first = false -%}
+{"t":"page","a":{{ pg.title | jsonify }},"b":{{ pg.title_id | default: pg.title | jsonify }},"x":{{ pg.lede | default: pg.description | jsonify }},"u":{{ pg.permalink | relative_url | jsonify }}}
+    {%- endif -%}
+  {%- endif -%}
+{%- endfor -%}
+{%- for r in site.data.research -%}
+{%- assign rtopics = r.topics | join: ", " -%}
+{%- assign rtext = r.desc | append: " " | append: rtopics -%}
+{%- unless first -%},{%- endunless -%}{%- assign first = false -%}
+{"t":"research","a":{{ r.name | jsonify }},"b":{{ r.name_id | default: r.name | jsonify }},"x":{{ rtext | jsonify }},"u":{{ "/research/" | append: "#" | append: r.anchor | relative_url | jsonify }}}
+{%- endfor -%}
+{%- assign tm = site.data.team.members -%}
+{%- unless first -%},{%- endunless -%}{%- assign first = false -%}
+{"t":"team","a":{{ site.data.team.director.name | jsonify }},"b":{{ site.data.team.director.name | jsonify }},"x":{{ site.data.team.director.role | jsonify }},"u":{{ "/team/" | relative_url | jsonify }}}
+{%- for m in tm -%}
+,{"t":"team","a":{{ m.name | jsonify }},"b":{{ m.name | jsonify }},"x":{{ m.role | append: " " | append: m.focus | jsonify }},"u":{{ "/team/" | relative_url | jsonify }}}
+{%- endfor -%}
+{%- for g in site.data.grants -%}
+  {%- if g.status != "submitted" -%}
+,{"t":"grant","a":{{ g.title | jsonify }},"b":{{ g.title_id | default: g.title | jsonify }},"x":{{ g.funder | append: " " | append: g.scheme | jsonify }},"u":{{ "/grants/" | relative_url | jsonify }}}
+  {%- endif -%}
+{%- endfor -%}
+{%- for p in site.posts -%}
+,{"t":"post","a":{{ p.title | jsonify }},"b":{{ p.title_id | default: p.title | jsonify }},"x":{{ p.summary | jsonify }},"u":{{ p.url | relative_url | jsonify }}}
+{%- endfor -%}
+{%- for p in site.data.publications -%}
+,{"t":"pub","a":{{ p.title | jsonify }},"b":{{ p.title | jsonify }},"x":{{ p.authors | append: " " | append: p.venue | append: " " | append: p.year | jsonify }},"u":{% if p.url and p.url != "" %}{{ p.url | jsonify }}{% else %}{{ "/publications/?q=" | append: p.title | truncate: 80, "" | relative_url | jsonify }}{% endif %}}
+{%- endfor -%}
+]

@@ -1,0 +1,18 @@
+---
+layout: page
+title: Blog
+title_id: Blog
+subtitle: Notes, explainers, and lab updates
+subtitle_id: Catatan, penjelasan, dan kabar dari lab
+lede: Short articles on composites, agro-processing machinery, and group updates.
+lede_id: Artikel singkat tentang komposit, mesin pengolahan agro, dan kabar kelompok riset.
+description: Articles and updates from the Agromaterials Research Group on composites, agro-processing machinery, and field activities.
+permalink: /blog/
+---
+<div class="blog-grid">
+  {% for post in site.posts %}
+  {% include post-card.html post=post eager=forloop.first %}
+  {% else %}
+  <p>{% include t.html key="no_posts" %}</p>
+  {% endfor %}
+</div>

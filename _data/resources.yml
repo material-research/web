@@ -1,0 +1,18 @@
+# Resources page. Fields ending in _id are the Indonesian text (optional; falls back to English).
+- group: Standards & Test Methods
+  group_id: Standar & Metode Uji
+  items:
+    - { title: "ASTM D3039 — Tensile properties of polymer matrix composites", url: "https://www.astm.org/", note: "Reference for tensile testing", note_id: "Acuan untuk uji tarik" }
+    - { title: "ASTM D790 — Flexural properties", url: "https://www.astm.org/", note: "Three-point bending", note_id: "Uji lentur tiga titik" }
+    - { title: "ISO 527 — Plastics: tensile properties", url: "https://www.iso.org/", note: "", note_id: "" }
+- group: Software & Tools
+  group_id: Perangkat Lunak & Alat
+  items:
+    - { title: "ImageJ / Fiji", url: "https://imagej.net/software/fiji/", note: "Fiber diameter and SEM image analysis", note_id: "Analisis diameter serat dan citra SEM" }
+    - { title: "Origin / Python (SciPy)", url: "https://scipy.org/", note: "Weibull and curve fitting", note_id: "Weibull dan pencocokan kurva" }
+    - { title: "Zotero", url: "https://www.zotero.org/", note: "Reference management", note_id: "Manajemen referensi" }
+- group: Learning Materials
+  group_id: Materi Belajar
+  items:
+    - { title: "Introduction to natural fiber composites (slides)", title_id: "Pengantar komposit serat alam (slide)", url: "#", note: "Add your own slides or PDF", note_id: "Tambahkan slide atau PDF Anda sendiri" }
+    - { title: "Writing a materials science manuscript", title_id: "Menulis naskah ilmu material", url: "#", note: "Checklist for lab members", note_id: "Daftar periksa untuk anggota lab" }

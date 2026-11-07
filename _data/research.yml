@@ -1,0 +1,170 @@
+# Research areas (Home "What We Study" uses name/desc/icon/illus; the Research page also uses the extra fields below).
+# topics, materials (planned: true adds the "planned" tag), apps, next are optional; each has an _id twin for Indonesian.
+# icon: any Font Awesome 6 free icon name (without "fa-")
+# Fields ending in _id are the Indonesian text.
+- name: Composite Materials Engineering
+  name_id: Teknologi Rekayasa Material Komposit
+  icon: seedling
+  illus: composites
+  iso: true            # isometric illustration (_includes/illus/composites-iso.html); remove the line to use the old flat one
+  desc: >-
+    Our main field is the engineering and technology of composite materials made
+    from plant-based resources. Current work covers bamboo (Gigantochloa atter) and
+    ramie fibers in epoxy and polyester matrices, including alkaline fiber
+    treatment, fiber–resin wettability and adhesion, flame retardancy, and
+    drilling behavior, as well as rice husk-based smart composite panels for
+    grain storage. We are expanding to other plant materials such as oil palm,
+    coconut trunk (glugu), and coconut coir.
+  desc_id: >-
+    Bidang utama kami adalah teknologi rekayasa material komposit berbahan sumber daya
+    nabati. Riset saat ini mencakup serat bambu (Gigantochloa atter) dan rami pada
+    matriks epoksi dan poliester, meliputi perlakuan alkali serat, keterbasahan dan
+    adhesi serat–resin, ketahanan api, dan perilaku pengeboran, serta panel
+    komposit pintar berbasis sekam padi untuk penyimpanan gabah. Kami memperluas
+    kajian ke bahan tumbuhan lain seperti kelapa sawit, batang kelapa (glugu), dan
+    sabut kelapa.
+  anchor: composites
+  main: true
+  short: Composites
+  short_id: Komposit
+  topics:
+    - Alkaline treatment of bamboo and ramie fibers
+    - Fiber–resin wettability and adhesion
+    - Flame-retardant composites
+    - Drilling behavior of ramie/epoxy composites
+    - Smart composite panels from rice husk
+  topics_id:
+    - Perlakuan alkali serat bambu dan rami
+    - Keterbasahan dan adhesi serat–resin
+    - Komposit tahan api
+    - Perilaku pengeboran komposit rami/epoksi
+    - Panel komposit pintar dari sekam padi
+  materials_label: materials
+  materials:
+    - { en: "Bamboo (Gigantochloa atter)", id: "Bambu (Gigantochloa atter)" }
+    - { en: "Ramie", id: "Rami" }
+    - { en: "Rice husk", id: "Sekam padi" }
+    - { en: "Oil palm", id: "Kelapa sawit", planned: true }
+    - { en: "Coconut trunk (glugu)", id: "Batang kelapa (glugu)", planned: true }
+    - { en: "Coconut coir", id: "Sabut kelapa", planned: true }
+  apps:
+    - Safety cabin panels
+    - Smart composite panels for grain storage warehouses
+    - Bamboo-based cushioning material
+  apps_id:
+    - Panel safety cabin
+    - Panel komposit pintar untuk gudang penyimpanan gabah
+    - Material bantalan berbasis bambu
+  next: Extending the same approach to other plant materials, including oil palm, coconut trunk (glugu), and coconut coir.
+  next_id: Memperluas pendekatan yang sama ke bahan tumbuhan lain, termasuk kelapa sawit, batang kelapa (glugu), dan sabut kelapa.
+- name: Agro-Processing Machinery
+  name_id: Mesin Pengolahan Agro
+  icon: gears
+  illus: agro
+  iso: true
+  desc: >-
+    Design and development of machines for agricultural products, including
+    coffee cherry wet processing and grading, coconut skin peeling, and ginger
+    grating and pressing, plus reviews of rice milling, grinding, and corn
+    threshing equipment.
+  desc_id: >-
+    Perancangan dan pengembangan mesin untuk hasil pertanian, antara lain
+    pengolahan basah dan grading buah kopi, pengupas kulit ari kelapa, serta
+    pemarut dan pemeras jahe, ditambah kajian mesin penggilingan padi dan
+    perontok jagung.
+  anchor: agro
+  short: Agro Machinery
+  short_id: Mesin Agro
+  topics:
+    - Wet processing and grading of coffee cherries
+    - Coconut skin peeling
+    - Ginger grating and pressing
+    - Reviews of rice milling, grinding, and corn threshing equipment
+  topics_id:
+    - Pengolahan basah dan grading buah kopi
+    - Pengupasan kulit ari kelapa
+    - Pemarutan dan pemerasan jahe
+    - Kajian mesin penggilingan padi, penggiling, dan perontok jagung
+  materials_label: commodities
+  materials:
+    - { en: "Coffee", id: "Kopi" }
+    - { en: "Coconut", id: "Kelapa" }
+    - { en: "Ginger", id: "Jahe" }
+    - { en: "Rice", id: "Padi" }
+    - { en: "Corn", id: "Jagung" }
+  apps:
+    - Coffee wet-processing and grading machines
+    - Coconut skin peeler
+    - 2-in-1 ginger grater and press
+  apps_id:
+    - Mesin pengolahan basah dan grading kopi
+    - Mesin pengupas kulit ari kelapa
+    - Mesin 2 in 1 pemarut dan pemeras jahe
+- name: Manufacturing, CNC & Simulation
+  name_id: Manufaktur, CNC & Simulasi
+  icon: industry
+  illus: cnc
+  iso: true
+  desc: >-
+    CNC machining programs and special fixtures that reduce cycle time,
+    process planning for mass production, and finite element (FEM) simulation of
+    structural parts.
+  desc_id: >-
+    Program pemesinan CNC dan fixture khusus untuk mengurangi waktu siklus,
+    perencanaan proses produksi massal, dan simulasi elemen hingga (FEM) pada
+    komponen struktural.
+  anchor: manufacturing
+  short: Manufacturing
+  short_id: Manufaktur
+  topics:
+    - CNC programs and fixtures that cut cycle time
+    - Process planning for mass production
+    - Finite element (FEM) simulation of structural parts
+  topics_id:
+    - Program CNC dan fixture yang memangkas waktu siklus
+    - Perencanaan proses produksi massal
+    - Simulasi elemen hingga (FEM) pada komponen struktural
+  apps:
+    - Special fixtures on a 3-axis CNC machine for circular pattern interpolar products
+    - Mass production of steel hinges on a 2-axis CNC machine
+    - Stress analysis of AISI 304 steel I-beams
+  apps_id:
+    - Fixture khusus pada mesin CNC 3 sumbu untuk produk circular pattern interpolar
+    - Produksi massal engsel baja pada mesin CNC 2 sumbu
+    - Analisis tegangan balok profil-I baja AISI 304
+- name: Energy & Drive Systems
+  name_id: Energi & Sistem Penggerak
+  icon: bolt
+  illus: energy
+  iso: true
+  desc: >-
+    Cross-flow and vertical-axis wind turbine design, drive motor systems for
+    industrial machines, pump efficiency with automatic sensors, and standby
+    generator automation.
+  desc_id: >-
+    Perancangan turbin cross flow dan turbin angin sumbu vertikal, sistem motor
+    penggerak mesin industri, efisiensi pompa dengan sensor otomatis, dan
+    otomasi genset siaga.
+  anchor: energy
+  short: Energy & Drives
+  short_id: Energi & Penggerak
+  topics:
+    - Cross-flow turbine design and cost analysis
+    - Vertical-axis wind turbine development
+    - Drive motor systems for industrial machines
+    - Pump efficiency with automatic sensors
+    - Standby generator refueling automation
+  topics_id:
+    - Perancangan dan analisis biaya turbin cross flow
+    - Pengembangan turbin angin sumbu vertikal
+    - Sistem motor penggerak mesin industri
+    - Efisiensi pompa dengan sensor otomatis
+    - Otomasi pengisian bahan bakar genset siaga
+  apps:
+    - Cross-flow turbine runners (2.5 kW and 20 kW designs)
+    - Vertical-axis wind turbine
+    - Automatic fuel refiller for standby generators
+  apps_id:
+    - Runner turbin cross flow (rancangan 2,5 kW dan 20 kW)
+    - Turbin angin sumbu vertikal
+    - Pengisi bahan bakar otomatis untuk genset siaga

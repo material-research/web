@@ -1,0 +1,11 @@
+# News items. date: YYYY-MM-DD. "html" (English) and "html_id" (Indonesian) are plain text, or may contain links when there is no "url".
+# Optional: "url" (whole row becomes a link, with "Read more"). When the url is a blog post, its cover (photo or illustration) is the thumbnail automatically;
+# for other urls add "image" (under assets/img/, WebP, under 60 KB). With "url" keep the text free of <a> links.
+- date: 2026-11-06
+  html: 'Bimtek Angkatan I on producing smart composite panels from rice husk, part of the ICARE 2026 grant, held in Soppeng.'
+  html_id: 'Bimtek Angkatan I produksi smart composite panel berbasis sekam padi, bagian dari hibah ICARE 2026, diselenggarakan di Soppeng.'
+  url: /blog/2026/11/06/bimtek-icare-soppeng/        # makes the whole row a link; use https://... for external links
+- date: 2026-11-05
+  html: 'Agromaterials Research Group website launched.'
+  html_id: 'Situs web Agromaterials Research Group diluncurkan.'
+  url: /blog/2026/11/05/welcome-to-atim-arg/

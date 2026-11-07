@@ -1,0 +1,30 @@
+<nav class="site-nav" role="navigation" aria-label="Main navigation">
+  <div class="nav-container">
+    <a href="{{ '/' | relative_url }}" class="nav-logo" aria-label="{{ site.title }}">
+      <span class="logo-mark"><img src="{{ '/assets/img/logo-small.webp' | relative_url }}" alt="" width="44" height="44"></span>
+      <span class="logo-text">{{ site.lab.nav_name | default: site.title }}</span>
+    </a>
+    <button type="button" class="search-btn search-btn--bar" data-search-open aria-label="{{ site.data.i18n.search_open.en }}"><i class="fas fa-magnifying-glass" aria-hidden="true"></i></button>
+    <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
+      <span class="hamburger"></span>
+    </button>
+    <ul class="nav-links">
+      <li><a href="{{ '/' | relative_url }}"{% if page.url == '/' %} class="active" aria-current="page"{% endif %}>{% include t.html key="nav_home" %}</a></li>
+      <li><a href="{{ '/about/' | relative_url }}"{% if page.url == '/about/' %} class="active"{% endif %}>{% include t.html key="nav_about" %}</a></li>
+      <li><a href="{{ '/research/' | relative_url }}"{% if page.url == '/research/' %} class="active"{% endif %}>{% include t.html key="nav_research" %}</a></li>
+      <li><a href="{{ '/team/' | relative_url }}"{% if page.url == '/team/' %} class="active"{% endif %}>{% include t.html key="nav_team" %}</a></li>
+      <li><a href="{{ '/publications/' | relative_url }}"{% if page.url == '/publications/' %} class="active"{% endif %}>{% include t.html key="nav_publications" %}</a></li>
+      {% if site.show_pages.grants %}<li><a href="{{ '/grants/' | relative_url }}"{% if page.url == '/grants/' %} class="active"{% endif %}>{% include t.html key="nav_grants" %}</a></li>{% endif %}
+      <li><a href="{{ '/blog/' | relative_url }}"{% if page.url contains '/blog' %} class="active"{% endif %}>{% include t.html key="nav_blog" %}</a></li>
+      {% if site.show_pages.resources %}<li><a href="{{ '/resources/' | relative_url }}"{% if page.url == '/resources/' %} class="active"{% endif %}>{% include t.html key="nav_resources" %}</a></li>{% endif %}
+      {% if site.show_pages.calendar %}<li><a href="{{ '/deadlines/' | relative_url }}"{% if page.url == '/deadlines/' %} class="active"{% endif %}>{% include t.html key="nav_calendar" %}</a></li>{% endif %}
+      {% if site.show_pages.apply %}<li><a href="{{ '/apply/' | relative_url }}"{% if page.url == '/apply/' %} class="active"{% endif %}>{% include t.html key="nav_apply" %}</a></li>{% endif %}
+      <li><a href="{{ '/contact/' | relative_url }}"{% if page.url == '/contact/' %} class="active"{% endif %}>{% include t.html key="nav_contact" %}</a></li>
+      <li class="nav-search"><button type="button" class="search-btn" data-search-open aria-label="{{ site.data.i18n.search_open.en }}" title="{{ site.data.i18n.search_open.en }} (Ctrl/Cmd+K)"><i class="fas fa-magnifying-glass" aria-hidden="true"></i></button></li>
+      <li class="lang-switch" role="group" aria-label="Language / Bahasa">
+        <button type="button" class="lang-btn" data-set-lang="en" aria-pressed="true" title="English">EN</button>
+        <button type="button" class="lang-btn" data-set-lang="id" aria-pressed="false" title="Bahasa Indonesia">ID</button>
+      </li>
+    </ul>
+  </div>
+</nav>

@@ -1,0 +1,22 @@
+{%- assign n = include.n -%}
+{%- assign np = nil -%}
+{%- if n.url -%}
+{%- assign np = site.posts | where: "url", n.url | first -%}
+{%- if n.url contains "http" %}{% assign nu = n.url %}{% else %}{% assign nu = n.url | relative_url %}{% endif -%}
+{%- endif -%}
+{%- if np -%}
+{% include post-card.html post=np hl="h3" %}
+{%- else -%}
+<article class="blog-card fade-in">
+  <div class="blog-thumb-link">
+    {%- if n.image %}<img src="{{ '/assets/img/' | append: n.image | relative_url }}" alt="" class="blog-thumb" width="640" height="360" loading="lazy">
+    {%- else %}<div class="blog-thumb blog-thumb--placeholder" aria-hidden="true"></div>{% endif -%}
+  </div>
+  <div class="blog-card-body">
+    <p class="blog-card-meta">{% include date-long.html d=n.date %}</p>
+    {% assign nh = n.html | replace: '@BASE@', site.baseurl %}{% assign nhi = n.html_id | replace: '@BASE@', site.baseurl %}
+    <h3 class="blog-card-title">{% if n.url %}<a href="{{ nu }}" class="card-stretch">{% endif %}{% include tt.html en=nh id=nhi %}{% if n.url %}</a>{% endif %}</h3>
+    {% if n.url %}<p class="card-read">{% include t.html key="news_read" %} <i class="fas fa-arrow-right" aria-hidden="true"></i></p>{% endif %}
+  </div>
+</article>
+{%- endif -%}

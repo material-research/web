@@ -1,0 +1,203 @@
+# Interface strings in English (en) and Indonesian (id).
+# Content data (_data/*.yml) uses fields such as `desc` and `desc_id`.
+# To add a language later, add a new key here and in assets/js/main.js.
+
+skip: { en: "Skip to main content", id: "Lewati ke konten utama" }
+
+nav_home: { en: "Home", id: "Beranda" }
+nav_about: { en: "About Us", id: "Tentang Kami" }
+nav_research: { en: "Research", id: "Riset" }
+nav_team: { en: "Team", id: "Tim" }
+nav_publications: { en: "Publications", id: "Publikasi" }
+nav_blog: { en: "Blog", id: "Blog" }
+nav_resources: { en: "Resources", id: "Sumber Daya" }
+nav_calendar: { en: "Calendar", id: "Kalender" }
+nav_apply: { en: "Apply", id: "Bergabung" }
+nav_contact: { en: "Contact", id: "Kontak" }
+
+footer_explore: { en: "Explore", id: "Jelajahi" }
+footer_lab: { en: "Lab", id: "Lab" }
+footer_connect: { en: "Connect", id: "Terhubung" }
+footer_email: { en: "Email", id: "Email" }
+
+show: { en: "Show", id: "Tampilkan" }
+hide: { en: "Hide", id: "Sembunyikan" }
+show_more: { en: "Show more", id: "Tampilkan lebih banyak" }
+show_less: { en: "Show less", id: "Tampilkan lebih sedikit" }
+
+# ---- Home ----
+hero_title: { en: 'Composite materials<br>from <span class="highlight typer" data-words="plant-based|renewable|agricultural">plant-based</span> resources', id: 'Material komposit<br>dari sumber daya <span class="highlight typer" data-words="nabati|terbarukan|pertanian">nabati</span>' }
+hero_tagline: { en: "Engineering composites, agro-processing machines, and sustainable manufacturing.", id: "Rekayasa komposit, mesin pengolahan agro, dan manufaktur berkelanjutan." }
+btn_explore: { en: "Explore Research", id: "Jelajahi Riset" }
+btn_apply_join: { en: "Apply to Join", id: "Daftar Bergabung" }
+study_title: { en: "What We Study", id: "Yang Kami Teliti" }
+study_lede: { en: "Four connected areas, from plant-based composite materials to the machines, manufacturing methods, and energy systems that put them to work.", id: "Empat bidang yang saling terhubung, dari material komposit nabati hingga mesin, metode manufaktur, dan sistem energi yang memanfaatkannya." }
+projects_title: { en: "Featured Research", id: "Riset Unggulan" }
+projects_lede: { en: "Selected research directions drawn from our publications.", id: "Arah riset pilihan yang diambil dari publikasi kami." }
+news_title: { en: "Recent News", id: "Berita Terbaru" }
+
+# ---- Research ----
+research_facilities_title: { en: "Facilities & Methods", id: "Fasilitas & Metode" }
+research_facilities_lede: { en: "Replace this section with the equipment and methods available in your lab.", id: "Ganti bagian ini dengan peralatan dan metode yang tersedia di lab Anda." }
+fac_1: { en: "Universal testing machine (tensile, flexural, compression)", id: "Mesin uji universal (tarik, lentur, tekan)" }
+fac_2: { en: "Charpy / Izod impact tester", id: "Alat uji impak Charpy / Izod" }
+fac_3: { en: "Scanning electron microscope (SEM)", id: "Scanning electron microscope (SEM)" }
+fac_4: { en: "FTIR, XRD, TGA, and DSC", id: "FTIR, XRD, TGA, dan DSC" }
+fac_5: { en: "Compression molding, hand lay-up, and vacuum infusion", id: "Cetak tekan, hand lay-up, dan vacuum infusion" }
+
+# ---- Team ----
+edu_title: { en: "Education", id: "Pendidikan" }
+exp_title: { en: "Experience", id: "Pengalaman" }
+members_title: { en: "Research Members", id: "Anggota Peneliti" }
+alumni_title: { en: "Alumni", id: "Alumni" }
+link_email: { en: "Email", id: "Email" }
+
+# ---- Publications ----
+search_placeholder: { en: "Search by title, author, or venue", id: "Cari berdasarkan judul, penulis, atau jurnal" }
+clear: { en: "Clear", id: "Hapus filter" }
+pub_empty: { en: "No publications match your filters.", id: "Tidak ada publikasi yang cocok dengan filter Anda." }
+filter_by: { en: "Filter by", id: "Filter:" }
+
+# ---- Blog ----
+no_posts: { en: "No posts yet.", id: "Belum ada artikel." }
+all_posts: { en: "All posts", id: "Semua artikel" }
+
+# ---- Calendar ----
+type_conference: { en: "conference", id: "konferensi" }
+type_journal: { en: "journal", id: "jurnal" }
+type_grant: { en: "grant", id: "hibah" }
+type_lab: { en: "lab", id: "lab" }
+
+# ---- Apply ----
+apply_phd_title: { en: "PhD Students", id: "Mahasiswa Doktor" }
+apply_phd_desc: { en: "Describe the PhD opportunities, funding, and the background you are looking for.", id: "Jelaskan peluang S3, pendanaan, dan latar belakang yang Anda cari." }
+apply_ms_title: { en: "Master & Undergraduate", id: "Magister & Sarjana" }
+apply_ms_desc: { en: "Describe thesis, final-project, and research-assistant opportunities in the lab.", id: "Jelaskan peluang tesis, tugas akhir, dan asisten riset di lab." }
+apply_visit_title: { en: "Visiting Researchers", id: "Peneliti Tamu" }
+apply_visit_desc: { en: "Describe how visitors and postdocs can collaborate and use lab facilities.", id: "Jelaskan bagaimana peneliti tamu dan postdoc dapat berkolaborasi dan memakai fasilitas lab." }
+apply_how: { en: "How to apply", id: "Cara mendaftar" }
+apply_step1: { en: "Prepare a CV, a short statement of research interest, and transcripts.", id: "Siapkan CV, pernyataan singkat minat riset, dan transkrip nilai." }
+apply_step2_pre: { en: "Email them to", id: "Kirim melalui email ke" }
+apply_step2_post: { en: 'with the subject "Application — your name — position".', id: 'dengan subjek "Lamaran — nama Anda — posisi".' }
+apply_step3: { en: "We will respond to shortlisted candidates for a short interview.", id: "Kami akan menghubungi kandidat terpilih untuk wawancara singkat." }
+apply_btn: { en: "Send application email", id: "Kirim email lamaran" }
+
+# ---- Contact ----
+contact_send: { en: "Send us an email", id: "Kirim email kepada kami" }
+contact_desc: { en: "For applications, collaboration proposals, and general inquiries.", id: "Untuk lamaran, usulan kolaborasi, dan pertanyaan umum." }
+contact_director: { en: "Contact Person", id: "Narahubung" }
+contact_visit: { en: "Visit Us", id: "Kunjungi Kami" }
+contact_online: { en: "Find Us Online", id: "Temukan Kami Daring" }
+
+# ---- 404 ----
+back_home: { en: "Back to home", id: "Kembali ke beranda" }
+
+# ---- Strings used by JavaScript (counts, calendar) ----
+js_publications: { en: "publications", id: "publikasi" }
+js_of: { en: "of", id: "dari" }
+js_passed: { en: "Passed", id: "Lewat" }
+js_today: { en: "Today", id: "Hari ini" }
+js_day_left: { en: "day left", id: "hari lagi" }
+js_days_left: { en: "days left", id: "hari lagi" }
+
+# ---- Grants ----
+nav_grants: { en: "Grants", id: "Hibah" }
+g_stat_total: { en: "Total grants", id: "Total hibah" }
+g_status_active: { en: "Ongoing", id: "Berjalan" }
+g_status_completed: { en: "Completed", id: "Selesai" }
+g_status_submitted: { en: "Under review", id: "Dalam penilaian" }
+g_filter_all: { en: "All", id: "Semua" }
+g_funder: { en: "Funder", id: "Penyelenggara" }
+g_scheme: { en: "Scheme", id: "Skema" }
+g_amount: { en: "Grant amount", id: "Besar hibah" }
+g_pi: { en: "Principal investigator", id: "Ketua peneliti" }
+g_partners: { en: "Partners", id: "Mitra" }
+g_empty: { en: "No grants match this filter.", id: "Tidak ada hibah untuk filter ini." }
+js_grants: { en: "grants", id: "hibah" }
+btn_contact_us: { en: "Contact Us", id: "Hubungi Kami" }
+
+# ---- About ----
+about_who_title: { en: "Who We Are", id: "Siapa Kami" }
+about_who_p1: { en: "The Agromaterials Research Group is a research group at Politeknik ATI Makassar. Our main field is composite materials engineering technology, and we connect it with the machines and manufacturing processes needed to turn agricultural resources into useful products.", id: "Agromaterials Research Group adalah kelompok riset di Politeknik ATI Makassar. Bidang utama kami adalah teknologi rekayasa material komposit, yang kami hubungkan dengan mesin dan proses manufaktur yang dibutuhkan untuk mengubah sumber daya pertanian menjadi produk bermanfaat." }
+about_who_p2: { en: "We work with plant-based materials such as bamboo, ramie, and rice husk, and plan to study more, including oil palm, coconut trunk, and coconut coir. Our work also covers agro-processing machinery for coffee, coconut, and ginger, CNC manufacturing and simulation, and energy and drive systems, supported by national research funding.", id: "Kami bekerja dengan bahan nabati seperti bambu, rami, dan sekam padi, dan berencana mengkaji lebih banyak, termasuk kelapa sawit, batang kelapa, dan sabut kelapa. Riset kami juga mencakup mesin pengolahan agro untuk kopi, kelapa, dan jahe, manufaktur CNC dan simulasi, serta sistem energi dan penggerak, dengan dukungan pendanaan riset nasional." }
+hero_stat_funding: { en: "Funding awarded (USD)", id: "Dana hibah (USD)" }
+about_stat_areas: { en: "Research areas", id: "Bidang riset" }
+about_stat_pubs: { en: "Publications", id: "Publikasi" }
+about_stat_grants: { en: "Research grants", id: "Hibah penelitian" }
+about_vision: { en: "Vision", id: "Visi" }
+about_mission: { en: "Mission", id: "Misi" }
+about_focus_title: { en: "Focus Areas", id: "Bidang Fokus" }
+about_network_title: { en: "Funding & Collaboration", id: "Pendanaan & Kolaborasi" }
+about_funders: { en: "Funders", id: "Pemberi dana" }
+about_collab: { en: "Co-author institutions", id: "Institusi koautor" }
+about_cta_title: { en: "Work with us", id: "Bekerja sama dengan kami" }
+about_cta_text: { en: "Interested in collaboration, student projects, or industry partnerships? Get in touch.", id: "Tertarik berkolaborasi, proyek mahasiswa, atau kemitraan industri? Hubungi kami." }
+g_total_funding: { en: "Total funding awarded", id: "Total dana hibah" }
+g_total_idr: { en: "Indonesian rupiah", id: "Rupiah" }
+g_total_usd: { en: "US dollars (approx.)", id: "Dolar AS (perkiraan)" }
+js_rate_live: { en: "Live rate: 1 USD = Rp {rate} · updated {date}", id: "Kurs terkini: 1 USD = Rp {rate} · diperbarui {date}" }
+js_rate_ref: { en: "Reference rate: 1 USD = Rp {rate} · {date} (live rate unavailable)", id: "Kurs acuan: 1 USD = Rp {rate} · {date} (kurs terkini tidak tersedia)" }
+g_total_note: { en: "ongoing and completed grants", id: "hibah berjalan dan selesai" }
+
+# ---- Research page ----
+res_jump: { en: "Jump to", id: "Loncat ke" }
+res_main: { en: "Main field", id: "Bidang utama" }
+res_topics: { en: "Key topics", id: "Fokus utama" }
+res_materials: { en: "Materials", id: "Bahan" }
+res_commodities: { en: "Commodities", id: "Komoditas" }
+res_apps: { en: "Applications and products", id: "Aplikasi dan produk" }
+res_next: { en: "Next directions", id: "Arah ke depan" }
+res_planned: { en: "planned", id: "direncanakan" }
+
+# ---- UI additions (publications, back to top, calls to action, contact) ----
+year_all: { en: "All years", id: "Semua tahun" }
+year_filter: { en: "Filter by year", id: "Saring menurut tahun" }
+pub_more: { en: "Show more", id: "Tampilkan lebih banyak" }
+pub_find: { en: "Find on Scholar", id: "Cari di Scholar" }
+back_to_top: { en: "Back to top", id: "Kembali ke atas" }
+cta_title: { en: "Interested in working with us?", id: "Tertarik bekerja sama dengan kami?" }
+cta_text: { en: "Tell us about your idea, a technical problem, or a student project. We would be glad to talk.", id: "Ceritakan ide, masalah teknis, atau proyek mahasiswa Anda. Kami dengan senang hati berdiskusi." }
+footer_campus: { en: "Campus website", id: "Situs kampus" }
+contact_map: { en: "Open in Maps", id: "Buka di Peta" }
+contact_areas: { en: "Areas we can talk about", id: "Bidang yang dapat dibahas" }
+contact_tips_title: { en: "Helpful to include in your message", id: "Sebaiknya disertakan dalam pesan Anda" }
+contact_tip1: { en: "Your name and institution", id: "Nama dan institusi Anda" }
+contact_tip2: { en: "The research area you are interested in", id: "Bidang riset yang Anda minati" }
+contact_tip3: { en: "What you would like to do together, such as a joint study, a student project, or a technical question", id: "Hal yang ingin dikerjakan bersama, misalnya penelitian bersama, proyek mahasiswa, atau pertanyaan teknis" }
+form_title: { en: "Send us a message", id: "Kirim pesan kepada kami" }
+form_name: { en: "Full name", id: "Nama lengkap" }
+form_email: { en: "Email address", id: "Alamat email" }
+form_org: { en: "Institution or company (optional)", id: "Institusi atau perusahaan (opsional)" }
+form_topic: { en: "Topic", id: "Topik" }
+form_topic_collab: { en: "Collaboration proposal", id: "Usulan kolaborasi" }
+form_topic_join: { en: "Application to join", id: "Lamaran bergabung" }
+form_topic_general: { en: "General inquiry", id: "Pertanyaan umum" }
+form_message: { en: "Message", id: "Pesan" }
+form_message_ph: { en: "How can we help?", id: "Apa yang bisa kami bantu?" }
+form_send: { en: "Send message", id: "Kirim pesan" }
+form_sending: { en: "Sending...", id: "Mengirim..." }
+form_ok: { en: "Thank you. Your message has been sent and we will reply by email.", id: "Terima kasih. Pesan Anda sudah terkirim dan kami akan membalas lewat email." }
+form_err: { en: "Sorry, the message could not be sent. Please try again or write to", id: "Maaf, pesan belum terkirim. Silakan coba lagi atau tulis langsung ke" }
+form_privacy: { en: "Your message is delivered to our group email and is not published.", id: "Pesan Anda dikirim ke email kelompok kami dan tidak dipublikasikan." }
+contact_or_email: { en: "Or email us directly", id: "Atau kirim email langsung" }
+copied: { en: "copied", id: "disalin" }
+news_read: { en: "Read more", id: "Baca selengkapnya" }
+email_hint: { en: "Tap to email or copy the address", id: "Ketuk untuk kirim email atau salin alamat" }
+news_all: { en: "See all articles", id: "Lihat semua artikel" }
+news_lede: { en: "Latest updates and activities from the group.", id: "Kabar dan kegiatan terbaru dari kelompok kami." }
+flow_title: { en: "From plant to product", id: "Dari tanaman ke produk" }
+flow_lede: { en: "How we turn agricultural biomass into engineered materials, in five steps. Select a step to read more.", id: "Cara kami mengubah biomassa pertanian menjadi material rekayasa dalam lima langkah. Pilih satu langkah untuk membaca lebih lanjut." }
+flow_step: { en: "Step", id: "Langkah" }
+search_open: { en: "Search the site", id: "Cari di situs" }
+search_site_placeholder: { en: "Search research, people, publications, news", id: "Cari riset, tim, publikasi, berita" }
+search_none: { en: "No results", id: "Tidak ada hasil" }
+search_hint: { en: "Type to search. Use the arrow keys and Enter, Esc to close.", id: "Ketik untuk mencari. Gunakan tombol panah dan Enter, Esc untuk menutup." }
+search_type_page: { en: "Page", id: "Halaman" }
+search_type_research: { en: "Research", id: "Riset" }
+search_type_team: { en: "Team", id: "Tim" }
+search_type_grant: { en: "Grant", id: "Hibah" }
+search_type_post: { en: "Article", id: "Artikel" }
+search_type_pub: { en: "Publication", id: "Publikasi" }
+pub_chart_year: { en: "Publications per year", id: "Publikasi per tahun" }
+pub_chart_theme: { en: "By research area", id: "Menurut bidang riset" }
+pub_chart_hint: { en: "Select a bar to filter the list below.", id: "Pilih sebuah batang untuk menyaring daftar di bawah." }

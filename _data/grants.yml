@@ -1,0 +1,45 @@
+# Funded grants (Grants page). Fields ending in _id are the Indonesian text.
+# status: active | completed  (there is no "under review" category; a `submitted` grant is simply not shown)
+# amount: free text shown on the card. amount_value: plain number in IDR (no dots) used for the total on the page;
+# add `currency: USD` (etc.) for non-rupiah grants, they are left out of the rupiah total.
+# amount: pi / partners / desc / url are optional and hidden when empty.
+# Source: owner's list (2026-11-05). Status is inferred from the year.
+
+- title: "Production of Rice Husk-Based Smart Composite Panels for Grain Storage Warehouses in Soppeng Regency"
+  title_id: "Produksi Smart Composite Panel Berbasis Sekam Padi untuk Gudang Penyimpanan Gabah di Kabupaten Soppeng"
+  funder: "Ministry of Agriculture"
+  funder_id: "Kementerian Pertanian"
+  scheme: "ICARE"
+  scheme_id: "ICARE"
+  amount: "Rp 500.000.000"
+  amount_value: 500000000
+  year_start: 2026
+  year_end: 2026
+  status: active
+  url: ""
+
+- title: "Design and Development of a Bamboo Fiber Extraction Machine with AI-Based Automatic Grinding Control"
+  title_id: "Rancang Bangun Mesin Ekstraksi Serat Bambu dengan Kontrol Penggilingan Otomatis Berbasis Artificial Intelligence"
+  funder: "Ministry of Industry"
+  funder_id: "Kementerian Perindustrian"
+  scheme: "SPIRIT"
+  scheme_id: "SPIRIT"
+  amount: "Rp 118.935.000"
+  amount_value: 118935000
+  year_start: 2025
+  year_end: 2025
+  status: completed
+  url: ""
+
+- title: "Design and Development of a Coffee Cherry Grading Machine with Automated Back Wash Circulation"
+  title_id: "Rancang Bangun Mesin Grading Buah Kopi dengan Otomatisasi Back Wash Circulation"
+  funder: "Ministry of Industry"
+  funder_id: "Kementerian Perindustrian"
+  scheme: "SPIRIT"
+  scheme_id: "SPIRIT"
+  amount: "Rp 69.678.150"
+  amount_value: 69678150
+  year_start: 2024
+  year_end: 2024
+  status: completed
+  url: ""

@@ -1,0 +1,20 @@
+{%- assign it = include.item -%}
+{%- if it.thumbnail -%}
+{%- assign img_src = it.thumbnail -%}{%- if include.card and it.thumbnail_card -%}{%- assign img_src = it.thumbnail_card -%}{%- endif -%}
+<img src="{{ '/assets/img/' | append: img_src | relative_url }}" alt="" class="{{ include.cls }}" decoding="async"{% if include.eager %} fetchpriority="high"{% else %} loading="lazy"{% endif %}>
+{%- elsif it.cover == "logo" -%}
+<div class="{{ include.cls }} blog-illus blog-illus--logo" aria-hidden="true"><img src="{{ '/assets/img/logo-360.webp' | relative_url }}" alt="" width="360" height="360" decoding="async"{% if include.eager %} fetchpriority="high"{% else %} loading="lazy"{% endif %}></div>
+{%- else -%}
+{%- assign key = it.illus -%}
+{%- unless key -%}
+  {%- assign tagstr = it.tags | join: " " | downcase -%}
+  {%- if tagstr contains "bamboo" or tagstr contains "composite" or tagstr contains "fiber" -%}{%- assign key = "bamboo" -%}
+  {%- elsif tagstr contains "coffee" or tagstr contains "agro" or tagstr contains "machine" -%}{%- assign key = "coffee" -%}
+  {%- elsif tagstr contains "coconut" or tagstr contains "ginger" -%}{%- assign key = "coconut" -%}
+  {%- else -%}
+    {%- assign pick = it.title | size | modulo: 3 -%}
+    {%- if pick == 0 -%}{%- assign key = "bamboo" -%}{%- elsif pick == 1 -%}{%- assign key = "coffee" -%}{%- else -%}{%- assign key = "coconut" -%}{%- endif -%}
+  {%- endif -%}
+{%- endunless -%}
+<div class="{{ include.cls }} blog-illus blog-illus--{{ key }} illus-static" aria-hidden="true">{% if key == 'coffee' %}{% include illus/coffee.html %}{% elsif key == 'coconut' %}{% include illus/coconut.html %}{% else %}{% include illus/bamboo.html %}{% endif %}</div>
+{%- endif -%}

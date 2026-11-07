@@ -1,0 +1,20 @@
+{%- assign total = 0 -%}{%- assign counted = 0 -%}{%- assign y0 = 9999 -%}{%- assign y1 = 0 -%}
+{%- for gr in site.data.grants -%}
+  {%- if gr.status == "active" or gr.status == "completed" -%}
+    {%- if gr.amount_value and gr.currency == nil or gr.currency == "IDR" -%}
+      {%- if gr.amount_value -%}
+        {%- assign total = total | plus: gr.amount_value -%}{%- assign counted = counted | plus: 1 -%}
+        {%- if gr.year_start < y0 -%}{%- assign y0 = gr.year_start -%}{%- endif -%}
+        {%- if gr.year_end > y1 -%}{%- assign y1 = gr.year_end -%}{%- endif -%}
+      {%- endif -%}
+    {%- endif -%}
+  {%- endif -%}
+{%- endfor -%}
+{%- assign digits = total | append: "" -%}{%- assign dlen = digits.size -%}{%- assign fmt = "" -%}
+{%- for k in (1..dlen) -%}
+  {%- assign pos = dlen | minus: k -%}
+  {%- assign ch = digits | slice: pos, 1 -%}
+  {%- assign fmt = ch | append: fmt -%}
+  {%- assign rem = k | modulo: 3 -%}
+  {%- if rem == 0 and k < dlen -%}{%- assign fmt = "." | append: fmt -%}{%- endif -%}
+{%- endfor -%}

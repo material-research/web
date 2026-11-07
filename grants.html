@@ -1,0 +1,80 @@
+---
+layout: page
+title: Grants
+title_id: Hibah
+subtitle: Funded research
+subtitle_id: Penelitian yang didanai
+lede: Research grants awarded to the group, with their funders, schemes, and amounts.
+lede_id: Hibah penelitian yang diterima kelompok riset, beserta pemberi dana, skema, dan besar dananya.
+description: Research grants awarded to the Agromaterials Research Group, with funders, schemes, and amounts.
+permalink: /grants/
+---
+{% assign grants_all = site.data.grants | where_exp: "x", "x.status != 'submitted'" %}
+{% assign grants = grants_all | sort: "year_start" | reverse %}
+{% assign n_active = grants_all | where: "status", "active" | size %}
+{% assign n_done = grants_all | where: "status", "completed" | size %}
+
+{% include grant-calc.html %}
+{% if counted > 0 %}
+<div class="grant-total fade-in" id="grantTotal" data-total="{{ total }}" data-sheet="{{ site.lab.usd_idr_sheet }}" data-rate="{{ site.lab.usd_idr_fallback }}" data-rate-date="{{ site.lab.usd_idr_fallback_date }}">
+  <span class="grant-total-label">{% include t.html key="g_total_funding" %}</span>
+  <div class="grant-total-grid">
+    <div class="grant-total-col">
+      <span class="grant-total-cur">{% include t.html key="g_total_idr" %}</span>
+      <span class="grant-total-amount" id="gtIdr">Rp {{ fmt }}</span>
+    </div>
+    <div class="grant-total-col">
+      <span class="grant-total-cur">{% include t.html key="g_total_usd" %}</span>
+      <span class="grant-total-amount" id="gtUsd">US$ &hellip;</span>
+    </div>
+  </div>
+  <div class="grant-total-foot">
+    <span class="grant-total-note">{{ counted }} {% include t.html key="g_total_note" %} &middot; {{ y0 }}{% if y1 != y0 %}&ndash;{{ y1 }}{% endif %}.</span>
+    <span class="grant-rate-note" id="gtRate" aria-live="polite"></span>
+  </div>
+</div>
+{% endif %}
+
+<div class="grant-stats fade-in">
+  <div class="grant-stat"><span class="grant-stat-num">{{ grants.size }}</span><span class="grant-stat-label">{% include t.html key="g_stat_total" %}</span></div>
+  <div class="grant-stat"><span class="grant-stat-num">{{ n_active }}</span><span class="grant-stat-label">{% include t.html key="g_status_active" %}</span></div>
+  <div class="grant-stat"><span class="grant-stat-num">{{ n_done }}</span><span class="grant-stat-label">{% include t.html key="g_status_completed" %}</span></div>
+</div>
+
+<div class="pub-filters" id="grantFilters">
+  <div class="pub-filter-row">
+    <button class="pub-filter-btn grant-filter-btn active" data-status="all">{% include t.html key="g_filter_all" %}</button>
+    <button class="pub-filter-btn grant-filter-btn" data-status="active">{% include t.html key="g_status_active" %}</button>
+    <button class="pub-filter-btn grant-filter-btn" data-status="completed">{% include t.html key="g_status_completed" %}</button>
+  </div>
+</div>
+<p class="pub-count" id="grantCount" aria-live="polite">{{ grants.size }} grants</p>
+
+<div class="grant-list">
+  {% for g in grants %}
+  {% assign status_key = "g_status_" | append: g.status %}
+  <article class="grant-card" data-status="{{ g.status }}">
+    <div class="grant-main">
+      <p class="grant-badges">
+        <span class="grant-status grant-status--{{ g.status }}">{% include t.html key=status_key %}</span>
+        <span class="grant-period">{{ g.year_start }}{% if g.year_end != g.year_start %}&ndash;{{ g.year_end }}{% endif %}</span>
+      </p>
+      <h2 class="grant-title">{% if g.url != "" %}<a href="{{ g.url }}" target="_blank" rel="noopener">{% include tt.html en=g.title id=g.title_id %}</a>{% else %}{% include tt.html en=g.title id=g.title_id %}{% endif %}</h2>
+      {% if g.desc %}<p class="grant-desc">{% include tt.html en=g.desc id=g.desc_id %}</p>{% endif %}
+      <dl class="grant-meta">
+        <div><dt>{% include t.html key="g_funder" %}</dt><dd>{% include tt.html en=g.funder id=g.funder_id %}</dd></div>
+        <div><dt>{% include t.html key="g_scheme" %}</dt><dd>{% include tt.html en=g.scheme id=g.scheme_id %}</dd></div>
+        {% if g.pi and g.pi != "" %}<div><dt>{% include t.html key="g_pi" %}</dt><dd>{{ g.pi }}</dd></div>{% endif %}
+        {% if g.partners and g.partners != "" %}<div><dt>{% include t.html key="g_partners" %}</dt><dd>{% include tt.html en=g.partners id=g.partners_id %}</dd></div>{% endif %}
+      </dl>
+    </div>
+    <div class="grant-amount-box">
+      <span class="grant-amount-label">{% include t.html key="g_amount" %}</span>
+      <span class="grant-amount">{{ g.amount }}</span>
+    </div>
+  </article>
+  {% endfor %}
+</div>
+<p class="pub-empty" id="grantEmpty" hidden>{% include t.html key="g_empty" %}</p>
+
+{% include cta.html %}

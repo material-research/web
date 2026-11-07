@@ -1,0 +1,29 @@
+# Calendar / deadlines page. date: YYYY-MM-DD (end date for ranges).
+# type: conference | journal | grant | lab
+# title_id is the Indonesian title (optional).
+# NOTE: examples only.
+- title: "International Conference on Composite Materials — abstract deadline"
+  title_id: "International Conference on Composite Materials — batas pengiriman abstrak"
+  date: 2027-01-15
+  type: conference
+  url: "#"
+- title: "Special issue: Sustainable Natural Fiber Composites — submission"
+  title_id: "Edisi khusus: Sustainable Natural Fiber Composites — batas pengiriman naskah"
+  date: 2027-02-28
+  type: journal
+  url: "#"
+- title: "National research grant — proposal submission"
+  title_id: "Hibah riset nasional — batas pengiriman proposal"
+  date: 2027-03-10
+  type: grant
+  url: "#"
+- title: "Lab meeting: results presentation"
+  title_id: "Pertemuan lab: presentasi hasil"
+  date: 2026-12-05
+  type: lab
+  url: ""
+- title: "Student research seminar"
+  title_id: "Seminar riset mahasiswa"
+  date: 2026-10-20
+  type: lab
+  url: ""

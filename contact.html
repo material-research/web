@@ -1,0 +1,100 @@
+---
+layout: page
+title: Contact
+title_id: Kontak
+subtitle: Get in touch
+subtitle_id: Hubungi kami
+lede: Whether you are interested in collaboration, joining the lab, or learning more about our work, we would love to hear from you.
+lede_id: Baik Anda tertarik berkolaborasi, bergabung dengan lab, maupun ingin tahu lebih banyak tentang riset kami, kami senang mendengar dari Anda.
+description: Contact the Agromaterials Research Group at Politeknik ATI Makassar for collaboration, applications, and general inquiries.
+permalink: /contact/
+---
+{% assign fk = site.lab.contact_form_key %}
+{% if fk and fk != "" %}
+<section class="contact-form-wrap fade-in">
+  <h2 class="contact-form-title">{% include t.html key="form_title" %}</h2>
+  <form id="contactForm" class="contact-form" action="https://api.web3forms.com/submit" method="POST">
+    <input type="hidden" name="access_key" value="{{ fk }}">
+    <input type="hidden" name="subject" value="Website inquiry - Agromaterials Research Group">
+    <input type="hidden" name="from_name" value="{{ site.title }} website">
+    <input type="checkbox" name="botcheck" class="hp-field" tabindex="-1" autocomplete="off" aria-hidden="true">
+    <div class="form-row">
+      <div class="form-field"><label for="cfName">{% include t.html key="form_name" %}</label><input id="cfName" name="name" type="text" required autocomplete="name" maxlength="120"></div>
+      <div class="form-field"><label for="cfEmail">{% include t.html key="form_email" %}</label><input id="cfEmail" name="email" type="email" required autocomplete="email" maxlength="160"></div>
+    </div>
+    <div class="form-row">
+      <div class="form-field"><label for="cfOrg">{% include t.html key="form_org" %}</label><input id="cfOrg" name="institution" type="text" autocomplete="organization" maxlength="160"></div>
+      <div class="form-field"><label for="cfTopic">{% include t.html key="form_topic" %}</label>
+        <select id="cfTopic" name="topic">
+          <option value="Collaboration proposal" data-opt="form_topic_collab">{{ site.data.i18n.form_topic_collab.en }}</option>
+          <option value="Application to join" data-opt="form_topic_join">{{ site.data.i18n.form_topic_join.en }}</option>
+          <option value="General inquiry" data-opt="form_topic_general">{{ site.data.i18n.form_topic_general.en }}</option>
+        </select>
+      </div>
+    </div>
+    <div class="form-field"><label for="cfMessage">{% include t.html key="form_message" %}</label><textarea id="cfMessage" name="message" rows="6" required maxlength="4000" data-ph="form_message_ph" placeholder="{{ site.data.i18n.form_message_ph.en }}"></textarea></div>
+    <div class="form-actions">
+      <button type="submit" class="btn btn-primary" id="cfSend"><i class="fas fa-paper-plane" aria-hidden="true"></i> <span id="cfSendLabel">{{ site.data.i18n.form_send.en }}</span></button>
+      <p class="form-note">{% include t.html key="form_privacy" %}</p>
+    </div>
+    <p class="form-status" id="cfStatus" role="status" aria-live="polite"></p>
+  </form>
+</section>
+{% endif %}
+
+<a class="contact-primary fade-in" href="mailto:{{ site.lab.email }}">
+  <div class="contact-primary-icon"><i class="fas fa-envelope"></i></div>
+  <div class="contact-primary-body">
+    <h2 class="contact-primary-heading">{% if fk and fk != "" %}{% include t.html key="contact_or_email" %}{% else %}{% include t.html key="contact_send" %}{% endif %}</h2>
+    <p class="contact-primary-desc">{% include t.html key="contact_desc" %}</p>
+    <span class="contact-primary-email">{{ site.lab.email }}</span>
+    <span class="contact-primary-hint">{% include t.html key="email_hint" %}</span>
+  </div>
+</a>
+
+<div class="contact-details fade-in">
+  <div class="contact-detail">
+    <h3 class="contact-detail-label">{% include t.html key="contact_director" %}</h3>
+    <p class="contact-detail-value">{{ site.data.team.director.name }}</p>
+    <p class="contact-detail-note"><strong>{% include tt.html en=site.data.team.director.label id=site.data.team.director.label_id %}</strong></p>
+    <p class="contact-detail-note">{% include tt.html en=site.data.team.director.role id=site.data.team.director.role_id %}</p>
+  </div>
+  <div class="contact-detail">
+    <h3 class="contact-detail-label">{% include t.html key="contact_visit" %}</h3>
+    <p class="contact-detail-value">{{ site.lab.address_line1 }}</p>
+    <p class="contact-detail-note">{{ site.lab.address_line2 }}</p>
+    <p class="contact-detail-links">
+      <a href="https://www.google.com/maps/search/?api=1&query={{ site.lab.institution | uri_escape }}%20{{ site.lab.address_line2 | uri_escape }}" target="_blank" rel="noopener"><i class="fas fa-location-dot" aria-hidden="true"></i> {% include t.html key="contact_map" %}</a>
+      <a href="{{ site.lab.institution_url }}" target="_blank" rel="noopener"><i class="fas fa-globe" aria-hidden="true"></i> {% include t.html key="footer_campus" %}</a>
+    </p>
+  </div>
+{% assign sc = site.lab.social %}{% if sc.github != "" or sc.scholar != "" or sc.linkedin != "" or sc.instagram != "" or sc.x != "" %}
+  <div class="contact-detail">
+    <h3 class="contact-detail-label">{% include t.html key="contact_online" %}</h3>
+    <div class="contact-social">
+      {% if site.lab.social.github != "" %}<a href="{{ site.lab.social.github }}" target="_blank" rel="noopener"><i class="fab fa-github"></i> GitHub</a>{% endif %}
+      {% if site.lab.social.scholar != "" %}<a href="{{ site.lab.social.scholar }}" target="_blank" rel="noopener"><i class="fas fa-graduation-cap"></i> Scholar</a>{% endif %}
+      {% if site.lab.social.linkedin != "" %}<a href="{{ site.lab.social.linkedin }}" target="_blank" rel="noopener"><i class="fab fa-linkedin"></i> LinkedIn</a>{% endif %}
+      {% if site.lab.social.instagram != "" %}<a href="{{ site.lab.social.instagram }}" target="_blank" rel="noopener"><i class="fab fa-instagram"></i> Instagram</a>{% endif %}
+      {% if site.lab.social.x != "" %}<a href="{{ site.lab.social.x }}" target="_blank" rel="noopener"><i class="fab fa-x-twitter"></i> X</a>{% endif %}
+    </div>
+  </div>
+{% endif %}
+</div>
+
+<div class="contact-help fade-in">
+  <div class="contact-help-col">
+    <h3 class="contact-detail-label">{% include t.html key="contact_tips_title" %}</h3>
+    <ul class="contact-list">
+      <li>{% include t.html key="contact_tip1" %}</li>
+      <li>{% include t.html key="contact_tip2" %}</li>
+      <li>{% include t.html key="contact_tip3" %}</li>
+    </ul>
+  </div>
+  <div class="contact-help-col">
+    <h3 class="contact-detail-label">{% include t.html key="contact_areas" %}</h3>
+    <ul class="contact-list">
+      {% for a in site.data.research %}<li><a href="{{ '/research/' | relative_url }}#{{ a.anchor }}">{% include tt.html en=a.name id=a.name_id %}</a></li>{% endfor %}
+    </ul>
+  </div>
+</div>

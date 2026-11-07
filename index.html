@@ -1,0 +1,99 @@
+---
+layout: default
+title: Home
+description: Agromaterials Research Group at Politeknik ATI Makassar. Composite materials from plant-based resources, agro-processing machinery, and sustainable manufacturing.
+permalink: /
+---
+<!-- Hero -->
+<section class="hero-wrap">
+  <div class="hero-pattern" aria-hidden="true"></div>
+  <div class="hero hero--split hero--iso">
+    <div class="hero-text">
+      <p class="hero-eyebrow">{{ site.lab.institution }}</p>
+      <h1 class="hero-title">{% include t.html key="hero_title" %}</h1>
+      <p class="hero-tagline">{% include t.html key="hero_tagline" %}</p>
+      <div class="hero-actions">
+        <a href="{{ '/research/' | relative_url }}" class="btn btn-primary"><i class="fas fa-microscope"></i> {% include t.html key="btn_explore" %}</a>
+        {% if site.show_pages.apply %}<a href="{{ '/apply/' | relative_url }}" class="btn btn-outline"><i class="fas fa-paper-plane"></i> {% include t.html key="btn_apply_join" %}</a>
+        {% else %}<a href="{{ '/contact/' | relative_url }}" class="btn btn-outline"><i class="fas fa-envelope"></i> {% include t.html key="btn_contact_us" %}</a>{% endif %}
+      </div>
+      {% assign hs_grants = site.data.grants | where_exp: "x", "x.status != 'submitted'" | size %}
+      {% include grant-calc.html %}
+      {% assign hs_usd_k = total | divided_by: site.lab.usd_idr_fallback | divided_by: 1000.0 | round %}
+      <ul class="hero-stats">
+        <li><b>{{ site.data.publications | size }}</b><span>{% include t.html key="about_stat_pubs" %}</span></li>
+        <li><b>{{ hs_grants }}</b><span>{% include t.html key="about_stat_grants" %}</span></li>
+        <li><b id="hsUsd" data-total="{{ total }}" data-sheet="{{ site.lab.usd_idr_sheet }}" data-rate="{{ site.lab.usd_idr_fallback }}" data-rate-date="{{ site.lab.usd_idr_fallback_date }}">{{ hs_usd_k }}K</b><span>{% include t.html key="hero_stat_funding" %}</span></li>
+      </ul>
+    </div>
+    <div class="hero-visual" aria-hidden="true">{% include illus/hero-iso.html %}</div>
+  </div>
+</section>
+
+{% include flow-map.html %}
+
+<!-- What we study -->
+<section class="section fade-in">
+  <h2 class="editorial-heading is-centered">{% include t.html key="study_title" %}</h2>
+  <p class="editorial-lede is-centered">{% include t.html key="study_lede" %}</p>
+  <div class="research-grid">
+    {% for t in site.data.research %}
+    {% assign flip = forloop.index0 | modulo: 2 %}
+    <div class="research-row{% if flip == 1 %} research-row--flip{% endif %}">
+    <div class="research-grid-text">
+      <div class="theme-item">
+        <h3 class="theme-name"><i class="fas fa-{{ t.icon }}" aria-hidden="true"></i> {% include tt.html en=t.name id=t.name_id %}</h3>
+        <p class="theme-desc">{% include tt.html en=t.desc id=t.desc_id %}</p>
+      </div>
+    </div>
+    <div class="research-grid-figure research-grid-figure--{{ forloop.index0 | modulo: 2 }}{% if t.iso %} research-grid-figure--iso{% endif %}" aria-hidden="true">{% if t.illus == 'composites' %}{% if t.iso %}{% include illus/composites-iso.html %}{% else %}{% include illus/composites.html %}{% endif %}{% elsif t.illus == 'agro' %}{% if t.iso %}{% include illus/agro-iso.html %}{% else %}{% include illus/agro.html %}{% endif %}{% elsif t.illus == 'cnc' %}{% if t.iso %}{% include illus/cnc-iso.html %}{% else %}{% include illus/cnc.html %}{% endif %}{% elsif t.illus == 'energy' %}{% if t.iso %}{% include illus/energy-iso.html %}{% else %}{% include illus/energy.html %}{% endif %}{% endif %}</div>
+    </div>
+    {% endfor %}
+  </div>
+</section>
+
+<!-- Current projects -->
+<section class="section--alt">
+  <div class="section-inner fade-in">
+    <div class="section-header is-centered"><h2 class="section-title">{% include t.html key="projects_title" %}</h2></div>
+    <p class="editorial-lede is-centered" style="margin-bottom: 2rem;">{% include t.html key="projects_lede" %}</p>
+    <div class="project-grid">
+      {% for p in site.data.projects %}
+      <article class="project-card{% if p.iso %} project-card--open{% endif %}" id="{{ p.id }}">
+        <div class="project-media{% if p.iso %} project-media--isobg{% endif %}">
+          {% if p.video != "" %}
+          <video class="project-video" muted loop playsinline preload="none" data-src="{{ '/assets/media/' | append: p.video | relative_url }}"{% if p.image != "" %} poster="{{ '/assets/img/' | append: p.image | relative_url }}"{% endif %}></video>
+          {% elsif p.image != "" %}
+          <img src="{{ '/assets/img/' | append: p.image | relative_url }}" alt="{{ p.title }}" loading="lazy">
+          {% elsif p.illus %}
+          <div class="project-media--illus{% if p.iso %} project-media--iso{% endif %}" aria-hidden="true">{% if p.iso %}{% if p.illus == 'bamboo' %}{% include illus/feat-bamboo-iso.html %}{% elsif p.illus == 'coffee' %}{% include illus/feat-coffee-iso.html %}{% elsif p.illus == 'coconut' %}{% include illus/feat-coconut-iso.html %}{% endif %}{% else %}{% if p.illus == 'bamboo' %}{% include illus/bamboo.html %}{% elsif p.illus == 'coffee' %}{% include illus/coffee.html %}{% elsif p.illus == 'coconut' %}{% include illus/coconut.html %}{% endif %}{% endif %}</div>
+          {% else %}
+          <div class="project-media--placeholder" aria-hidden="true"></div>
+          {% endif %}
+        </div>
+        <div class="project-body">
+          <h3>{% include tt.html en=p.title id=p.title_id %}</h3>
+          <p>{% include tt.html en=p.desc id=p.desc_id %}</p>
+          <p class="project-linkline">
+            {% for l in p.links %}<a href="{{ l.url }}" class="project-link" target="_blank" rel="noopener"><i class="{{ l.icon }}" aria-hidden="true"></i>{% include tt.html en=l.label id=l.label_id %}</a>{% endfor %}
+          </p>
+          <p class="project-thrusts">{% for th in p.thrusts %}{% assign th_id = p.thrusts_id[forloop.index0] %}{% assign area = site.data.research | where: "short", th | first %}<a class="thrust-pill" href="{{ '/research/' | relative_url }}{% if area %}#{{ area.anchor }}{% endif %}">{% include tt.html en=th id=th_id %} <i class="fas fa-arrow-right" aria-hidden="true"></i></a>{% endfor %}</p>
+        </div>
+      </article>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<!-- Recent news -->
+<section class="section--plain">
+  <div class="section-inner fade-in">
+    <div class="section-header is-centered"><h2 class="section-title">{% include t.html key="news_title" %}</h2></div>
+    <p class="editorial-lede is-centered" style="margin-bottom: 2rem;">{% include t.html key="news_lede" %}</p>
+    {% assign news_sorted = site.data.news | sort: "date" | reverse %}
+    <div class="blog-grid news-grid">
+      {% for n in news_sorted limit: 3 %}{% include news-card.html n=n %}{% endfor %}
+    </div>
+    <p class="news-all"><a href="{{ '/blog/' | relative_url }}" class="btn btn-outline btn-sm">{% include t.html key="news_all" %} <i class="fas fa-arrow-right" aria-hidden="true"></i></a></p>
+  </div>
+</section>

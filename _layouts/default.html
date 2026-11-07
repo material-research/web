@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="{{ site.lang }}">
+<head>
+  <meta charset="utf-8">
+  <meta name="color-scheme" content="light">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  {% assign page_title = page.title | default: site.title %}
+  {% if page.url == '/' %}{% assign full_title = site.title | append: ' — ' | append: site.tagline %}{% else %}{% assign full_title = page_title | append: ' | ' | append: site.title %}{% endif %}
+  {% assign page_desc = page.description | default: page.summary | default: site.description | strip_newlines %}
+  <title>{{ full_title }}</title>
+  <meta name="description" content="{{ page_desc }}">
+  <link rel="canonical" href="{{ page.url | absolute_url }}">
+  <meta property="og:title" content="{{ full_title }}">
+  <meta property="og:description" content="{{ page_desc }}">
+  <meta property="og:url" content="{{ page.url | absolute_url }}">
+  <meta property="og:site_name" content="{{ site.title }}">
+  <meta property="og:type" content="{% if page.layout == 'post' %}article{% else %}website{% endif %}">
+  <meta property="og:image" content="{{ '/assets/img/og-card.jpg' | absolute_url }}">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="author" content="{{ site.author }}">
+  {% if page.noindex %}<meta name="robots" content="noindex, nofollow">{% endif %}
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ResearchOrganization",
+    "name": "{{ site.title }}",
+    "url": "{{ '/' | absolute_url }}",
+    "description": "{{ site.description | strip_newlines }}",
+    "parentOrganization": { "@type": "CollegeOrUniversity", "name": "{{ site.lab.institution }}", "url": "{{ site.lab.institution_url }}" }
+  }
+  </script>
+
+  <link rel="icon" type="image/png" href="{{ '/assets/img/favicon.png' | relative_url }}">
+  <link rel="apple-touch-icon" href="{{ '/assets/img/logo-small.png' | relative_url }}">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}?v={{ site.time | date: '%Y%m%d%H%M%S' }}">
+  <script>
+    document.documentElement.className += ' js';
+    // Apply the saved language before first paint to avoid a flash of the wrong language.
+    // The visitor's saved choice wins; otherwise the site default (_config.yml `lang`, English) is used.
+    try { var l = localStorage.getItem('lang'); if (l === 'en' || l === 'id') document.documentElement.lang = l; } catch (e) {}
+  </script>
+</head>
+<body>
+  <a href="#main-content" class="skip-link">{% include t.html key="skip" %}</a>
+  {% include nav.html %}
+  <main id="main-content">
+    {{ content }}
+  </main>
+  {% include footer.html %}
+  <button type="button" class="to-top" id="toTop" aria-label="{{ site.data.i18n.back_to_top.en }}" hidden>
+    <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path d="M12 19V6M6 11l6-6 6 6" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+  </button>
+  <script>window.LAB_I18N = {{ site.data.i18n | jsonify }}; window.LAB_SEARCH = {{ '/search.json' | relative_url | jsonify }};</script>
+  <script src="{{ '/assets/js/main.js' | relative_url }}?v={{ site.time | date: '%Y%m%d%H%M%S' }}"></script>
+</body>
+</html>
